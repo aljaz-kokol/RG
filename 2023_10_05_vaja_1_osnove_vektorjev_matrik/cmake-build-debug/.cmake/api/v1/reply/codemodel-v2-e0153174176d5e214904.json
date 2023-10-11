@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "2023_10_05_vaja_1_osnove_vektorjev_matrik",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "2023_10_05_vaja_1_osnove_vektorjev_matrik::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-2023_10_05_vaja_1_osnove_vektorjev_matrik-Debug-b44b46a9309d59e5fb7c.json",
+					"name" : "2023_10_05_vaja_1_osnove_vektorjev_matrik",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/aljazkokol/Desktop/FERI/RG/2023_10_05_vaja_1_osnove_vektorjev_matrik/cmake-build-debug",
+		"source" : "/Users/aljazkokol/Desktop/FERI/RG/2023_10_05_vaja_1_osnove_vektorjev_matrik"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

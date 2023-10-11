@@ -1,0 +1,3 @@
+/Users/aljazkokol/Desktop/FERI/RG/2023_10_05_vaja_1_osnove_vektorjev_matrik/cmake-build-debug/CMakeFiles/2023_10_05_vaja_1_osnove_vektorjev_matrik.dir
+/Users/aljazkokol/Desktop/FERI/RG/2023_10_05_vaja_1_osnove_vektorjev_matrik/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/aljazkokol/Desktop/FERI/RG/2023_10_05_vaja_1_osnove_vektorjev_matrik/cmake-build-debug/CMakeFiles/rebuild_cache.dir
