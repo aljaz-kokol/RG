@@ -8,7 +8,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 int main() {
-    OpenGLWindow window("TEST", 800, 600);
+    OpenGLWindow window("02 - piramida", 800, 600);
 
     Shader shader({
         {"vertex.vert", GL_VERTEX_SHADER},
@@ -16,7 +16,7 @@ int main() {
     });
 
     Cuboid cube(shader, 1, 1, 1);
-    Cuboid floor(shader, 3, -0.1, 2);
+    Cuboid floor(shader, 3, 0.1, 2);
 
     cube.create();
     floor.create();
