@@ -6,7 +6,7 @@
 
 class Cuboid : public Mesh {
 public:
-    Cuboid(const Shader& shader, float width, float height, float depth);
+    Cuboid(const ShaderProgram& shader, float width, float height, float depth);
 };
 
 

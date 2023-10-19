@@ -1,11 +1,11 @@
-#ifndef INC_2023_10_12_VAJA_2_PIRAMIDA_SHADER_H
-#define INC_2023_10_12_VAJA_2_PIRAMIDA_SHADER_H
+#ifndef INC_2023_10_12_VAJA_2_PIRAMIDA_SHADERPROGRAM_H
+#define INC_2023_10_12_VAJA_2_PIRAMIDA_SHADERPROGRAM_H
 
 #include <GL/glew.h>
 #include <vector>
 #include <string>
 
-class Shader {
+class ShaderProgram {
 private:
     GLint projectionLocation;
     GLint modelLocation;
@@ -18,8 +18,8 @@ private:
     std::vector<std::pair<std::string, GLenum>> shaders;
     void addShaderFromFile(const std::string& fileName, GLenum type) const;
 public:
-    Shader(const std::vector<std::pair<std::string, GLenum>>& shaders);
-    ~Shader();
+    ShaderProgram(const std::vector<std::pair<std::string, GLenum>>& shaders);
+    ~ShaderProgram();
     void compile();
     void clear();
     void use() const;

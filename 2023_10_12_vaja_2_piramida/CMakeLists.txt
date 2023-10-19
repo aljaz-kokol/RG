@@ -13,8 +13,8 @@ add_executable(2023_10_12_vaja_2_piramida main.cpp
         OpenGLWindow.h
         object/Mesh.cpp
         object/Mesh.h
-        shader/Shader.cpp
-        shader/Shader.h
+        shader/ShaderProgram.cpp
+        shader/ShaderProgram.h
         object/Cuboid/Cuboid.cpp
         object/Cuboid/Cuboid.h)
 

@@ -189,12 +189,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "shader/Shader.cpp",
+			"path" : "shader/ShaderProgram.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "shader/Shader.h",
+			"path" : "shader/ShaderProgram.h",
 			"sourceGroupIndex" : 1
 		},
 		{

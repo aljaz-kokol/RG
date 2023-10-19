@@ -2,25 +2,25 @@
 #include <gl/glew.h>
 #include "OpenGLWindow.h"
 #include "object/Cuboid/Cuboid.h"
-#include "shader/Shader.h"
+#include "shader/ShaderProgram.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
 int main() {
-    OpenGLWindow window("02 - piramida", 800, 600);
+    OpenGLWindow window("02 - piramida", 800, 800);
 
-    Shader shader({
+    ShaderProgram shaderProgram({
         {"vertex.vert", GL_VERTEX_SHADER},
         {"fragment.frag", GL_FRAGMENT_SHADER}
     });
 
-    Cuboid cube(shader, 1, 1, 1);
-    Cuboid floor(shader, 3, 0.1, 2);
+    Cuboid cube(shaderProgram, 1, 1, 1);
+    Cuboid floor(shaderProgram, 3, 0.1, 2);
 
     cube.create();
     floor.create();
-    shader.compile();
+    shaderProgram.compile();
 
     float angle = 0.0;
     glm::mat4 projection = glm::perspective(glm::radians(65.0f), (GLfloat)window.getBufferWidth() / (GLfloat)window.getBufferHeight(), 0.1f, 100.0f);
@@ -30,8 +30,8 @@ int main() {
         glClearColor(0, 0, 0, 1);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        shader.use();
-        glUniformMatrix4fv(shader.getProjectionLocation(), 1, GL_FALSE, glm::value_ptr(projection));
+        shaderProgram.use();
+        glUniformMatrix4fv(shaderProgram.getProjectionLocation(), 1, GL_FALSE, glm::value_ptr(projection));
 
         cube.translate(glm::vec3(-0.3, -0.6f, -2.5f));
         cube.scale(0.3f);

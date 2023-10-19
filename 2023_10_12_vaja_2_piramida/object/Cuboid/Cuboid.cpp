@@ -1,6 +1,6 @@
 #include "Cuboid.h"
 
-Cuboid::Cuboid(const Shader& shader, float width, float height, float depth)
+Cuboid::Cuboid(const ShaderProgram& shader, float width, float height, float depth)
 : Mesh(shader, {
                -width, -height,  depth,
                width, -height,  depth,

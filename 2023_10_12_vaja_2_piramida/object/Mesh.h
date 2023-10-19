@@ -4,7 +4,7 @@
 #include <GL/glew.h>
 #include <GL/glew.h>
 #include <vector>
-#include "../shader/Shader.h"
+#include "../shader/ShaderProgram.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -17,9 +17,9 @@ protected:
     std::vector<GLfloat> vertices;
     std::vector<unsigned int> indices;
     glm::mat4 model;
-    const Shader& shader;
+    const ShaderProgram& shader;
 public:
-    Mesh(const Shader& shader, const std::vector<GLfloat>& vertices, const std::vector<unsigned int>& indices);
+    Mesh(const ShaderProgram& shader, const std::vector<GLfloat>& vertices, const std::vector<unsigned int>& indices);
     ~Mesh();
     void draw() const;
     void create();

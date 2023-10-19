@@ -1,6 +1,6 @@
 #include "Mesh.h"
 
-Mesh::Mesh(const Shader& shader, const std::vector<GLfloat>& vertices, const std::vector<unsigned int>& indices)
+Mesh::Mesh(const ShaderProgram& shader, const std::vector<GLfloat>& vertices, const std::vector<unsigned int>& indices)
 : vao(0), vbo(0), ibo(0), vertices(vertices), indices(indices), shader(shader), model(1) {}
 
 Mesh::~Mesh() {

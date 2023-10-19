@@ -70,8 +70,8 @@ build CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Mesh.cpp.o: CXX_COMPILER_
   OBJECT_DIR = CMakeFiles/2023_10_12_vaja_2_piramida.dir
   OBJECT_FILE_DIR = CMakeFiles/2023_10_12_vaja_2_piramida.dir/object
 
-build CMakeFiles/2023_10_12_vaja_2_piramida.dir/shader/Shader.cpp.o: CXX_COMPILER__2023_10_12_vaja_2_piramida_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_10_12_vaja_2_piramida/shader/Shader.cpp || cmake_object_order_depends_target_2023_10_12_vaja_2_piramida
-  DEP_FILE = CMakeFiles/2023_10_12_vaja_2_piramida.dir/shader/Shader.cpp.o.d
+build CMakeFiles/2023_10_12_vaja_2_piramida.dir/shader/ShaderProgram.cpp.o: CXX_COMPILER__2023_10_12_vaja_2_piramida_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_10_12_vaja_2_piramida/shader/ShaderProgram.cpp || cmake_object_order_depends_target_2023_10_12_vaja_2_piramida
+  DEP_FILE = CMakeFiles/2023_10_12_vaja_2_piramida.dir/shader/ShaderProgram.cpp.o.d
   FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_10_12_vaja_2_piramida.dir
@@ -92,7 +92,7 @@ build CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Cuboid/Cuboid.cpp.o: CXX_
 #############################################
 # Link the executable 2023_10_12_vaja_2_piramida
 
-build 2023_10_12_vaja_2_piramida: CXX_EXECUTABLE_LINKER__2023_10_12_vaja_2_piramida_Debug CMakeFiles/2023_10_12_vaja_2_piramida.dir/main.cpp.o CMakeFiles/2023_10_12_vaja_2_piramida.dir/OpenGLWindow.cpp.o CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Mesh.cpp.o CMakeFiles/2023_10_12_vaja_2_piramida.dir/shader/Shader.cpp.o CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Cuboid/Cuboid.cpp.o | /opt/homebrew/lib/libglfw.3.3.dylib /opt/homebrew/lib/libGLEW.2.2.0.dylib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd
+build 2023_10_12_vaja_2_piramida: CXX_EXECUTABLE_LINKER__2023_10_12_vaja_2_piramida_Debug CMakeFiles/2023_10_12_vaja_2_piramida.dir/main.cpp.o CMakeFiles/2023_10_12_vaja_2_piramida.dir/OpenGLWindow.cpp.o CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Mesh.cpp.o CMakeFiles/2023_10_12_vaja_2_piramida.dir/shader/ShaderProgram.cpp.o CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Cuboid/Cuboid.cpp.o | /opt/homebrew/lib/libglfw.3.3.dylib /opt/homebrew/lib/libGLEW.2.2.0.dylib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libglfw.3.3.dylib  /opt/homebrew/lib/libGLEW.2.2.0.dylib  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd  -Xlinker -framework -Xlinker OpenGL
   LINK_PATH = -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks

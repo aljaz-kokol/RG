@@ -1,15 +1,15 @@
-#include "Shader.h"
+#include "ShaderProgram.h"
 #include <fstream>
 #include <sstream>
 
-Shader::Shader(const std::vector<std::pair<std::string, GLenum>> &shaders)
+ShaderProgram::ShaderProgram(const std::vector<std::pair<std::string, GLenum>> &shaders)
 : projectionLocation(0), modelLocation(0), shaderID(0), meshColorLocation(0), shaders(shaders) {}
 
-Shader::~Shader() {
+ShaderProgram::~ShaderProgram() {
     clear();
 }
 
-void Shader::clear() {
+void ShaderProgram::clear() {
     if (shaderID != 0) {
         glDeleteProgram(shaderID);
     }
@@ -17,7 +17,7 @@ void Shader::clear() {
     projectionLocation = 0;
 }
 
-void Shader::addShaderFromFile(const std::string &fileName, GLenum type) const {
+void ShaderProgram::addShaderFromFile(const std::string &fileName, GLenum type) const {
     std::stringstream codeStream;
     std::string line;
     std::ifstream file(fileName);
@@ -49,7 +49,7 @@ void Shader::addShaderFromFile(const std::string &fileName, GLenum type) const {
     glAttachShader(shaderID, shader);
 }
 
-void Shader::compile() {
+void ShaderProgram::compile() {
     shaderID = glCreateProgram();
 
     for (const std::pair<std::string, GLenum>& shader : shaders) {
@@ -72,22 +72,22 @@ void Shader::compile() {
 
 }
 
-void Shader::use() const {
+void ShaderProgram::use() const {
     glUseProgram(shaderID);
 }
 
-GLint Shader::getProjectionLocation() const {
+GLint ShaderProgram::getProjectionLocation() const {
     return projectionLocation;
 }
 
-GLint Shader::getModelLocation() const {
+GLint ShaderProgram::getModelLocation() const {
     return modelLocation;
 }
 
-GLuint Shader::getShaderId() const {
+GLuint ShaderProgram::getShaderId() const {
     return shaderID;
 }
 
-GLint Shader::getMeshColorLocation() const {
+GLint ShaderProgram::getMeshColorLocation() const {
     return meshColorLocation;
 }
