@@ -16,7 +16,7 @@ int main() {
     });
 
     Cuboid cube(shader, 1, 1, 1);
-    Cuboid floor(shader, 3, 0.01, 2);
+    Cuboid floor(shader, 3, -0.1, 2);
 
     cube.create();
     floor.create();
@@ -51,7 +51,7 @@ int main() {
         cube.draw();
 
         floor.translate( glm::vec3(0, -0.9f, -2.5f));
-        floor.scale( glm::vec3(0.3, 0.3, 0.3));
+        floor.scale(glm::vec3(0.3, 0.3, 0.3));
         floor.applyTransformations();
         floor.setColor({0.0, 1.0, 0.0, 1.0});
         floor.draw();
