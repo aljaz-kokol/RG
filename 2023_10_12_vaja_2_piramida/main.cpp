@@ -29,29 +29,30 @@ int main() {
         glfwPollEvents();
         glClearColor(0, 0, 0, 1);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
         shader.use();
         glUniformMatrix4fv(shader.getProjectionLocation(), 1, GL_FALSE, glm::value_ptr(projection));
 
         cube.translate(glm::vec3(-0.3, -0.6f, -2.5f));
-        cube.scale(glm::vec3(0.3f, 0.3f, 0.3f));
+        cube.scale(0.3f);
         cube.applyTransformations();
         cube.setColor({1.0, 1.0, 0.0, 1.0});
         cube.draw();
 
         cube.translate(glm::vec3(0.3, -0.6f, -2.5f));
-        cube.scale(glm::vec3(0.3f, 0.3f, 0.3f));
+        cube.scale(0.3f);
         cube.applyTransformations();
         cube.setColor({1.0, 0.0, 0.0, 1.0});
         cube.draw();
 
         cube.translate(glm::vec3(0.0f, 0.0f, -2.5f));
-        cube.scale(glm::vec3(0.3f, 0.3f, 0.3f));
+        cube.scale(0.3f);
         cube.applyTransformations();
         cube.setColor({1.0, 0.0, 1.0, 1.0});
         cube.draw();
 
         floor.translate( glm::vec3(0, -0.9f, -2.5f));
-        floor.scale(glm::vec3(0.3, 0.3, 0.3));
+        floor.scale(0.3f);
         floor.applyTransformations();
         floor.setColor({0.0, 1.0, 0.0, 1.0});
         floor.draw();

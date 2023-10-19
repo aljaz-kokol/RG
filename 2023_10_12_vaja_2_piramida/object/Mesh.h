@@ -26,6 +26,7 @@ public:
     void clear();
     void rotateXYZ(float angle, const glm::vec3& coordAmount);
     void scale(const glm::vec3& factors);
+    void scale(float factor);
     void translate(const glm::vec3& values);
     void applyTransformations();
     void setColor(const glm::vec4& color);

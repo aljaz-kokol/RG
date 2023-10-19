@@ -55,6 +55,10 @@ void Mesh::scale(const glm::vec3 &factors) {
     model = glm::scale(model, factors);
 }
 
+void Mesh::scale(float factor) {
+    scale(glm::vec3(factor, factor, factor));
+}
+
 void Mesh::translate(const glm::vec3 &values) {
     model = glm::translate(model, values);
 }

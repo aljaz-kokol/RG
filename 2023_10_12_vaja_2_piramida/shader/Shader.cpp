@@ -3,7 +3,7 @@
 #include <sstream>
 
 Shader::Shader(const std::vector<std::pair<std::string, GLenum>> &shaders)
-: projectionLocation(0), modelLocation(0), shaderID(0), shaders(shaders) {}
+: projectionLocation(0), modelLocation(0), shaderID(0), meshColorLocation(0), shaders(shaders) {}
 
 Shader::~Shader() {
     clear();
@@ -66,11 +66,6 @@ void Shader::compile() {
         throw std::runtime_error(errorLog);
     }
 
-    glValidateProgram(shaderID);
-    glGetProgramiv(shaderID, GL_VALIDATE_STATUS, &result);
-    if (!result) {
-        glGetProgramInfoLog(shaderID, sizeof(errorLog), nullptr, errorLog);
-    }
     modelLocation = glGetUniformLocation(shaderID, "model");
     projectionLocation = glGetUniformLocation(shaderID, "projection");
     meshColorLocation = glGetUniformLocation(shaderID, "meshColor");
