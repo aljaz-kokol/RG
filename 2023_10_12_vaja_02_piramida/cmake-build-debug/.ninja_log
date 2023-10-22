@@ -1,0 +1,9 @@
+# ninja log v5
+7	340	1697704135577503263	CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Cuboid/Cuboid.cpp.o	a99559b83a975c3c
+1	44	1698001694469648290	build.ninja	a9be6f21cf08ebaa
+7	348	1697704135585504783	CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Mesh.cpp.o	34de751f613a3a3a
+4	364	1697994461300214134	CMakeFiles/2023_10_12_vaja_2_piramida.dir/main.cpp.o	3176dc2e796e58d9
+5	335	1697994848207391757	CMakeFiles/2023_10_12_vaja_2_piramida.dir/world/window/OpenGLWindow.cpp.o	6157732b50e3b059
+7	365	1697704135602351356	CMakeFiles/2023_10_12_vaja_2_piramida.dir/shader/ShaderProgram.cpp.o	322cdec3de9568d
+335	375	1697994848248766827	2023_10_12_vaja_2_piramida	665185b761794ef2
+4	141	1697994461077788515	CMakeFiles/2023_10_12_vaja_2_piramida.dir/world/io/keyboard/Keyboard.cpp.o	4f77865407111e82
