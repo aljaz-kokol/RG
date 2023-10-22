@@ -9,8 +9,8 @@ find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 
 add_executable(2023_10_12_vaja_2_piramida main.cpp
-        OpenGLWindow.cpp
-        OpenGLWindow.h
+        world/window/OpenGLWindow.cpp
+        world/window/OpenGLWindow.h
         object/Mesh.cpp
         object/Mesh.h
         shader/ShaderProgram.cpp

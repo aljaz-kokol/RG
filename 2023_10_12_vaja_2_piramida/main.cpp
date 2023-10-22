@@ -1,6 +1,6 @@
 #include <iostream>
 #include <gl/glew.h>
-#include "OpenGLWindow.h"
+#include "world/window/OpenGLWindow.h"
 #include "object/Cuboid/Cuboid.h"
 #include "shader/ShaderProgram.h"
 #include <glm/glm.hpp>
