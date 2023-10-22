@@ -1,14 +1,11 @@
 # ninja log v5
-7	332	1697703836977577815	CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Cuboid/Cuboid.cpp.o	a99559b83a975c3c
-0	44	1697704135230780898	build.ninja	a9be6f21cf08ebaa
-7	339	1697703836984972747	CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Mesh.cpp.o	34de751f613a3a3a
+7	340	1697704135577503263	CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Cuboid/Cuboid.cpp.o	a99559b83a975c3c
+1	55	1697755492648631653	build.ninja	a9be6f21cf08ebaa
+7	348	1697704135585504783	CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Mesh.cpp.o	34de751f613a3a3a
 8	352	1697703717793410775	CMakeFiles/2023_10_12_vaja_2_piramida.dir/shader/Shader.cpp.o	506dcba7a34abc71
 7	250	1697674093590047271	CMakeFiles/2023_10_12_vaja_2_piramida.dir/OpenGLWindow.cpp.o	7a30e3567095b0f6
-6	350	1697703987938007435	CMakeFiles/2023_10_12_vaja_2_piramida.dir/main.cpp.o	3176dc2e796e58d9
-350	388	1697703987978458300	2023_10_12_vaja_2_piramida	e5e0f7594a5da85d
-1	55	1697704135230780898	build.ninja	a9be6f21cf08ebaa
-7	340	1697704135577503263	CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Cuboid/Cuboid.cpp.o	a99559b83a975c3c
-7	348	1697704135585504783	CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Mesh.cpp.o	34de751f613a3a3a
+6	355	1697704841353542355	CMakeFiles/2023_10_12_vaja_2_piramida.dir/main.cpp.o	3176dc2e796e58d9
+355	393	1697704841393631034	2023_10_12_vaja_2_piramida	188be85154eb10e0
 7	365	1697704135602351356	CMakeFiles/2023_10_12_vaja_2_piramida.dir/shader/ShaderProgram.cpp.o	322cdec3de9568d
-6	380	1697704135618233236	CMakeFiles/2023_10_12_vaja_2_piramida.dir/main.cpp.o	3176dc2e796e58d9
-380	418	1697704135658397702	2023_10_12_vaja_2_piramida	188be85154eb10e0
+7	352	1697756135797405975	CMakeFiles/2023_10_12_vaja_2_piramida.dir/main.cpp.o	3176dc2e796e58d9
+352	391	1697756135839896202	2023_10_12_vaja_2_piramida	188be85154eb10e0

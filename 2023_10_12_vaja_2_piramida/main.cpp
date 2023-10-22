@@ -22,8 +22,7 @@ int main() {
     floor.create();
     shaderProgram.compile();
 
-    float angle = 0.0;
-    glm::mat4 projection = glm::perspective(glm::radians(65.0f), (GLfloat)window.getBufferWidth() / (GLfloat)window.getBufferHeight(), 0.1f, 100.0f);
+    glm::mat4 projection = glm::perspective(glm::radians(70.0f), (GLfloat)window.getBufferWidth() / (GLfloat)window.getBufferHeight(), 0.1f, 100.0f);
 
     while (!window.shouldClose()) {
         glfwPollEvents();
@@ -58,9 +57,6 @@ int main() {
         floor.draw();
 
         glUseProgram(0);
-        angle += 0.5;
-        if (angle > 360) angle -= 360;
-
         window.swapBuffers();
     }
     return 0;
