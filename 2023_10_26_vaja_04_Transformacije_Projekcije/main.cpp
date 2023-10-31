@@ -14,7 +14,7 @@ int main() {
     OpenGLWindow window("02 - piramida", 800, 800);
 
     ShaderProgram shaderProgram({
-        { "vertex.vert", GL_VERTEX_SHADER },
+        { "vertex.vert",   GL_VERTEX_SHADER },
         { "fragment.frag", GL_FRAGMENT_SHADER }
     });
 
@@ -43,22 +43,29 @@ int main() {
         {
             Color(Color::GREEN),
             {
-                    std::make_shared<Translation>(glm::vec3(SCALE_FACTOR, 0, -2.5f)),
-                    std::make_shared<Scale>(SCALE_FACTOR),
+                std::make_shared<Translation>(glm::vec3(SCALE_FACTOR, 0, -2.5f)),
+                std::make_shared<Scale>(SCALE_FACTOR),
             },
         },
         {
             Color(Color::CYAN),
             {
-                    std::make_shared<Translation>(glm::vec3(-SCALE_FACTOR, 0, -2.5f)),
-                    std::make_shared<Scale>(SCALE_FACTOR),
+                std::make_shared<Translation>(glm::vec3(-SCALE_FACTOR, 0, -2.5f)),
+                std::make_shared<Scale>(SCALE_FACTOR),
             },
         },
         {
             Color(Color::MAGENTA),
             {
-                    std::make_shared<Translation>(glm::vec3(0, 2 * SCALE_FACTOR, -2.5f)),
-                    std::make_shared<Scale>(SCALE_FACTOR),
+                std::make_shared<Translation>(glm::vec3(0, 2 * SCALE_FACTOR, -2.5f)),
+                std::make_shared<Scale>(SCALE_FACTOR),
+            },
+        },
+        {
+            Color(Color::RED +Color::YELLOW * 0.5f),
+            {
+                std::make_shared<Translation>(glm::vec3(0, -3.2 * SCALE_FACTOR, -2.5)),
+                std::make_shared<Scale>(glm::vec3(1.1, 0.03, 0.7)),
             },
         },
     };
@@ -67,7 +74,9 @@ int main() {
 
     shaderProgram.compile();
 
-    glm::mat4 projection = glm::perspective(glm::radians(70.0f), (GLfloat)window.getBufferWidth() / (GLfloat)window.getBufferHeight(), 0.1f, 100.0f);
+    glm::mat4 projection = glm::perspective(glm::radians(70.0f),
+                                            (GLfloat) window.getBufferWidth() / (GLfloat) window.getBufferHeight(),
+                                            0.1f, 100.0f);
 
     while (!window.shouldClose()) {
         glfwPollEvents();
@@ -76,7 +85,7 @@ int main() {
         shaderProgram.bind();
         shaderProgram.setUniform("projection", projection);
 
-        for (const auto & transformation : TRANSFORMATIONS) {
+        for (const auto &transformation: TRANSFORMATIONS) {
             cube.applyTransformations("model", transformation.second);
             cube.setColor(transformation.first);
             Renderer::draw(cube);
