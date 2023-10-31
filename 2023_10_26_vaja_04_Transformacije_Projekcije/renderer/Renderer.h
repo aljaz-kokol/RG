@@ -6,11 +6,7 @@
 #include "../vertex_array/VertexArray.h"
 #include "../buffer/index/IndexBuffer.h"
 #include "../shader/program/ShaderProgram.h"
-
-#define ASSERT(x) if (!(x)) assert(x);
-#define GLCall(x) GLClearError();\
-    x;\
-    ASSERT(GLLogCall(#x, __FILE__, __LINE__))
+#include "../object/Mesh.h"
 
 void GLClearError();
 bool GLLogCall(const char* function, const char* file, int line);
@@ -21,7 +17,7 @@ public:
     Renderer(const Renderer&) = delete;
     Renderer(Renderer&&) = delete;
     static void clear();
-    static void draw(const VertexArray& vao, const IndexBuffer& ibo, const ShaderProgram& program);
+    static void draw(const Mesh& mesh);
 };
 
 

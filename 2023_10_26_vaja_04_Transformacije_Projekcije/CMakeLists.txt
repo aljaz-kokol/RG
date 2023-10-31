@@ -15,8 +15,8 @@ add_executable(2023_10_26_vaja_04_Transformacije_Projekcije main.cpp
         object/Mesh.h
         shader/program/ShaderProgram.cpp
         shader/program/ShaderProgram.h
-        object/Cuboid/Cuboid.cpp
-        object/Cuboid/Cuboid.h
+        object/cuboid/Cuboid.cpp
+        object/cuboid/Cuboid.h
         buffer/Buffer.h
         buffer/vertex/VertexBuffer.cpp
         buffer/vertex/VertexBuffer.h
@@ -30,6 +30,15 @@ add_executable(2023_10_26_vaja_04_Transformacije_Projekcije main.cpp
         shader/Shader.cpp
         renderer/Renderer.cpp
         renderer/Renderer.h
+        object/transformation/Transformation.h
+        object/transformation/scale/Scale.cpp
+        object/transformation/scale/Scale.h
+        object/transformation/translation/Translation.cpp
+        object/transformation/translation/Translation.h
+        object/transformation/rotation/Rotation.cpp
+        object/transformation/rotation/Rotation.h
+        color/Color.cpp
+        color/Color.h
 )
 
 target_link_libraries(2023_10_26_vaja_04_Transformacije_Projekcije glfw glm::glm GLEW::GLEW OpenGL::GL)

@@ -10,4 +10,4 @@ public:
 };
 
 
-#endif //INC_2023_10_12_VAJA_2_PIRAMIDA_CUBOID_H
+#endif

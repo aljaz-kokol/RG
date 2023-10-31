@@ -8,6 +8,8 @@
 #include "../vertex_array/VertexArray.h"
 #include "../buffer/index/IndexBuffer.h"
 #include "../buffer/vertex/VertexBuffer.h"
+#include "transformation/Transformation.h"
+#include "../color/Color.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -17,17 +19,16 @@ protected:
     VertexArray vao;
     VertexBuffer vbo;
     IndexBuffer ibo;
-    glm::mat4 model;
     const ShaderProgram& shader;
 public:
     Mesh(const ShaderProgram& shader, const std::vector<GLfloat>& vertices, const std::vector<unsigned int>& indices);
-    void draw() const;
-    void rotateXYZ(float angle, const glm::vec3& coordAmount);
-    void scale(const glm::vec3& factors);
-    void scale(float factor);
-    void translate(const glm::vec3& values);
-    void applyTransformations();
-    void setColor(const glm::vec4& color);
+    void applyTransformations(std::string_view uniformVariable, const std::vector<std::shared_ptr<Transformation>> &transformations) const;
+    void setColor(const Color& color);
+
+    const VertexArray &getVao() const;
+    const VertexBuffer &getVbo() const;
+    const IndexBuffer &getIbo() const;
+    [[nodiscard]] const ShaderProgram &getShaderProgram() const;
 };
 
 

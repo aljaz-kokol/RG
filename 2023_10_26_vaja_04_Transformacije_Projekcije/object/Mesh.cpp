@@ -2,7 +2,7 @@
 #include "../renderer/Renderer.h"
 
 Mesh::Mesh(const ShaderProgram& shader, const std::vector<GLfloat>& vertices, const std::vector<unsigned int>& indices)
-: vbo(vertices), ibo(indices), shader(shader), model(1) {
+: vbo(vertices), ibo(indices), shader(shader) {
     BufferLayout layout;
     vao.bind();
     vbo.bind();
@@ -10,31 +10,30 @@ Mesh::Mesh(const ShaderProgram& shader, const std::vector<GLfloat>& vertices, co
     vao.addBuffer(vbo, layout);
 }
 
-void Mesh::draw() const {
-    Renderer::draw(vao, ibo, shader);
+void Mesh::applyTransformations(std::string_view uniformVariable, const std::vector<std::shared_ptr<Transformation>> &transformations) const {
+    glm::mat4 model(1);
+    for (const std::shared_ptr<Transformation>& transformation : transformations) {
+        model *= transformation->transform();
+    }
+    shader.setUniform(uniformVariable, model);
 }
 
-void Mesh::rotateXYZ(float angle, const glm::vec3 &coordAmount) {
-    model = glm::rotate(model, glm::radians(angle), coordAmount);
+void Mesh::setColor(const Color& color) {
+    shader.setUniform("meshColor", color.getValues());
 }
 
-void Mesh::scale(const glm::vec3 &factors) {
-    model = glm::scale(model, factors);
+const VertexArray &Mesh::getVao() const {
+    return vao;
 }
 
-void Mesh::scale(float factor) {
-    scale(glm::vec3(factor, factor, factor));
+const VertexBuffer &Mesh::getVbo() const {
+    return vbo;
 }
 
-void Mesh::translate(const glm::vec3 &values) {
-    model = glm::translate(model, values);
+const IndexBuffer &Mesh::getIbo() const {
+    return ibo;
 }
 
-void Mesh::applyTransformations() {
-    shader.setUniform("model", model);
-    model = glm::mat4(1);
-}
-
-void Mesh::setColor(const glm::vec4& color) {
-    shader.setUniform("meshColor", color);
+const ShaderProgram &Mesh::getShaderProgram() const {
+    return shader;
 }
