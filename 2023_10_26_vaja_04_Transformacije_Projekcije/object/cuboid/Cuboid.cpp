@@ -1,7 +1,7 @@
 #include "Cuboid.h"
 
 Cuboid::Cuboid(const ShaderProgram& shader, float width, float height, float depth)
-: Mesh(shader, {
+: width(width), height(height), depth(depth), Mesh(shader, {
                -width, -height,  depth,
                width, -height,  depth,
                width,  height,  depth,
@@ -32,3 +32,15 @@ Cuboid::Cuboid(const ShaderProgram& shader, float width, float height, float dep
         6, 7, 3
 
 }) {}
+
+float Cuboid::getWidth() const {
+    return width;
+}
+
+float Cuboid::getHeight() const {
+    return height;
+}
+
+float Cuboid::getDepth() const {
+    return depth;
+}

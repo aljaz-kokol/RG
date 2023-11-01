@@ -9,9 +9,9 @@ CuboidShape::CuboidShape(const Cuboid &cuboid, const std::vector<CuboidShapeElem
         this->elements[element.name] = { element.color, {
             std::make_shared<Translation>(
                 glm::vec3(
-                    scale * element.positions[0],
-                    scale * element.positions[1],
-                    element.positions[2]
+                    2 * scale * element.positions[0] * cuboid.getWidth(),
+                    2 * scale * element.positions[1] * cuboid.getHeight(),
+                    2 * element.positions[2] * cuboid.getDepth()
                 )
             ),
             std::make_shared<Scale>(scale),

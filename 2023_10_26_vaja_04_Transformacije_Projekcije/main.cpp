@@ -33,10 +33,9 @@ int main() {
     CuboidShape pyramide(
         cube,
         {
-            { "b-left", Color(Color::BLUE), { -2, -2, -2.5 } }, { "b-center", Color(Color::YELLOW), { 0, -2, -2.5 } },
-            { "b-right", Color(Color::RED), { 2, -2, -2.5 } }, { "m-left", Color(Color::GREEN), { -1, 0, -2.5 } },
-            { "m-right", Color(Color::CYAN), { 1, 0, -2.5 } }, { "t-center", Color(Color::MAGENTA), { 0, 2, -2.5 } },
-            { "t-center-l", Color(Color::WHITE), { 0, 4, -2.5 } },
+            { "b-left", Color(Color::BLUE), { -1, -1, -1.5 } }, { "b-center", Color(Color::YELLOW), { 0, -1, -1.5 } }, { "b-right", Color(Color::RED), { 1, -1, -1.5 } },
+            { "m-left", Color(Color::GREEN), { -0.5, 0, -1.5 } }, { "m-right", Color(Color::CYAN), { 0.5, 0, -1.5 } },
+            { "t-center", Color(Color::MAGENTA), { 0, 1, -1.5 } },
         },
         0.3
     );
@@ -59,7 +58,7 @@ int main() {
             std::make_shared<Scale>(glm::vec3(1.1, 0.03, 0.7)),
         });
         cube.setColor(Color(Color::RED +Color::YELLOW * 0.5f));
-        Renderer::draw(cube);
+        //Renderer::draw(cube);
 
         shaderProgram.unbind();
         window.swapBuffers();
