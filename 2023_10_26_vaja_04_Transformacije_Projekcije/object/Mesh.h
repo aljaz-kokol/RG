@@ -23,7 +23,7 @@ protected:
 public:
     Mesh(const ShaderProgram& shader, const std::vector<GLfloat>& vertices, const std::vector<unsigned int>& indices);
     void applyTransformations(std::string_view uniformVariable, const std::vector<std::shared_ptr<Transformation>> &transformations) const;
-    void setColor(const Color& color);
+    void setColor(const Color& color) const;
 
     const VertexArray &getVao() const;
     const VertexBuffer &getVbo() const;

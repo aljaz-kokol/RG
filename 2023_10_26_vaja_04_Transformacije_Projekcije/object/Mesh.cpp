@@ -18,7 +18,7 @@ void Mesh::applyTransformations(std::string_view uniformVariable, const std::vec
     shader.setUniform(uniformVariable, model);
 }
 
-void Mesh::setColor(const Color& color) {
+void Mesh::setColor(const Color& color) const {
     shader.setUniform("meshColor", color.getValues());
 }
 

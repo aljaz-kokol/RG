@@ -16,7 +16,7 @@ public:
     static const constexpr glm::vec4 WHITE = { 1, 1, 1, 1 };
     static const constexpr glm::vec4 BLACK = { 0, 0, 0, 1 };
 
-    explicit Color(const glm::vec4& values);
+    explicit Color(const glm::vec4& values = BLACK);
     [[nodiscard]] const glm::vec4& getValues() const;
 
     [[nodiscard]] Color operator+(const Color& color) const;

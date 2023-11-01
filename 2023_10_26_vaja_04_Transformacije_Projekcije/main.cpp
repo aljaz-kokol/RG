@@ -1,16 +1,16 @@
 #include <gl/glew.h>
 #include "world/window/OpenGLWindow.h"
 #include "renderer/Renderer.h"
-#include "object/Cuboid/Cuboid.h"
 #include "shader/program/ShaderProgram.h"
 #include "object/transformation/translation/Translation.h"
 #include "object/transformation/scale/Scale.h"
+#include "object/cuboid/cuboid-shape/CuboidShape.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <memory>
 
 int main() {
-    const float SCALE_FACTOR = 0.3;
+    float SCALE_FACTOR = 0.3;
     OpenGLWindow window("02 - piramida", 800, 800);
 
     ShaderProgram shaderProgram({
@@ -19,48 +19,6 @@ int main() {
     });
 
     const std::vector<std::pair<Color, std::vector<std::shared_ptr<Transformation>>>> TRANSFORMATIONS = {
-        {
-            Color(Color::BLUE),
-            {
-                std::make_shared<Translation>(glm::vec3(0.0, -2 * SCALE_FACTOR, -2.5f)),
-                std::make_shared<Scale>(SCALE_FACTOR),
-            },
-        },
-        {
-            Color(Color::YELLOW),
-            {
-                std::make_shared<Translation>(glm::vec3(-2 * SCALE_FACTOR, -2 * SCALE_FACTOR, -2.5f)),
-                std::make_shared<Scale>(SCALE_FACTOR),
-            },
-        },
-        {
-            Color(Color::RED),
-            {
-                std::make_shared<Translation>(glm::vec3(2 * SCALE_FACTOR, -2 * SCALE_FACTOR, -2.5f)),
-                std::make_shared<Scale>(SCALE_FACTOR),
-            },
-        },
-        {
-            Color(Color::GREEN),
-            {
-                std::make_shared<Translation>(glm::vec3(SCALE_FACTOR, 0, -2.5f)),
-                std::make_shared<Scale>(SCALE_FACTOR),
-            },
-        },
-        {
-            Color(Color::CYAN),
-            {
-                std::make_shared<Translation>(glm::vec3(-SCALE_FACTOR, 0, -2.5f)),
-                std::make_shared<Scale>(SCALE_FACTOR),
-            },
-        },
-        {
-            Color(Color::MAGENTA),
-            {
-                std::make_shared<Translation>(glm::vec3(0, 2 * SCALE_FACTOR, -2.5f)),
-                std::make_shared<Scale>(SCALE_FACTOR),
-            },
-        },
         {
             Color(Color::RED +Color::YELLOW * 0.5f),
             {
@@ -72,11 +30,20 @@ int main() {
 
     Cuboid cube(shaderProgram, 1, 1, 1);
 
+    CuboidShape pyramide(
+        cube,
+        {
+            { "b-left", Color(Color::BLUE), { -2, -2, -2.5 } }, { "b-center", Color(Color::YELLOW), { 0, -2, -2.5 } },
+            { "b-right", Color(Color::RED), { 2, -2, -2.5 } }, { "m-left", Color(Color::GREEN), { -1, 0, -2.5 } },
+            { "m-right", Color(Color::CYAN), { 1, 0, -2.5 } }, { "t-center", Color(Color::MAGENTA), { 0, 2, -2.5 } },
+            { "t-center-l", Color(Color::WHITE), { 0, 4, -2.5 } },
+        },
+        0.3
+    );
+
     shaderProgram.compile();
 
-    glm::mat4 projection = glm::perspective(glm::radians(70.0f),
-                                            (GLfloat) window.getBufferWidth() / (GLfloat) window.getBufferHeight(),
-                                            0.1f, 100.0f);
+    glm::mat4 projection = glm::perspective(glm::radians(70.0f), (GLfloat) window.getBufferWidth() / (GLfloat) window.getBufferHeight(), 0.1f, 100.0f);
 
     while (!window.shouldClose()) {
         glfwPollEvents();
@@ -85,11 +52,14 @@ int main() {
         shaderProgram.bind();
         shaderProgram.setUniform("projection", projection);
 
-        for (const auto &transformation: TRANSFORMATIONS) {
-            cube.applyTransformations("model", transformation.second);
-            cube.setColor(transformation.first);
-            Renderer::draw(cube);
-        }
+        pyramide.draw();
+
+        cube.applyTransformations("model", {
+            std::make_shared<Translation>(glm::vec3(0, -3.2 * SCALE_FACTOR, -2.5)),
+            std::make_shared<Scale>(glm::vec3(1.1, 0.03, 0.7)),
+        });
+        cube.setColor(Color(Color::RED +Color::YELLOW * 0.5f));
+        Renderer::draw(cube);
 
         shaderProgram.unbind();
         window.swapBuffers();

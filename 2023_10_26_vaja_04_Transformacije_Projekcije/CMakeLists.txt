@@ -39,6 +39,8 @@ add_executable(2023_10_26_vaja_04_Transformacije_Projekcije main.cpp
         object/transformation/rotation/Rotation.h
         color/Color.cpp
         color/Color.h
+        object/cuboid/cuboid-shape/CuboidShape.cpp
+        object/cuboid/cuboid-shape/CuboidShape.h
 )
 
 target_link_libraries(2023_10_26_vaja_04_Transformacije_Projekcije glfw glm::glm GLEW::GLEW OpenGL::GL)
