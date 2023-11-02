@@ -18,24 +18,14 @@ int main() {
         { "fragment.frag", GL_FRAGMENT_SHADER }
     });
 
-    const std::vector<std::pair<Color, std::vector<std::shared_ptr<Transformation>>>> TRANSFORMATIONS = {
-        {
-            Color(Color::RED +Color::YELLOW * 0.5f),
-            {
-                std::make_shared<Translation>(glm::vec3(0, -3.2 * SCALE_FACTOR, -2.5)),
-                std::make_shared<Scale>(glm::vec3(1.1, 0.03, 0.7)),
-            },
-        },
-    };
-
     Cuboid cube(shaderProgram, 1, 1, 1);
 
     CuboidShape pyramide(
         cube,
         {
-            { "b-left", Color(Color::BLUE), { -1, -1, -1.5 } }, { "b-center", Color(Color::YELLOW), { 0, -1, -1.5 } }, { "b-right", Color(Color::RED), { 1, -1, -1.5 } },
-            { "m-left", Color(Color::GREEN), { -0.5, 0, -1.5 } }, { "m-right", Color(Color::CYAN), { 0.5, 0, -1.5 } },
-            { "t-center", Color(Color::MAGENTA), { 0, 1, -1.5 } },
+            { { -1, -1, -1.5 }, Color(Color::BLUE) }, { { 0, -1, -1.5 }, Color(Color::YELLOW) }, { { 1, -1, -1.5 }, Color(Color::RED) },
+            { { -0.5, 0, -1.5 }, Color(Color::GREEN) }, { { 0.5, 0, -1.5 }, Color(Color::CYAN) },
+            { { 0, 1, -1.5 }, Color(Color::MAGENTA) },
         },
         0.3
     );
@@ -43,6 +33,15 @@ int main() {
     shaderProgram.compile();
 
     glm::mat4 projection = glm::perspective(glm::radians(70.0f), (GLfloat) window.getBufferWidth() / (GLfloat) window.getBufferHeight(), 0.1f, 100.0f);
+
+    window.addKeyAction(GLFW_KEY_W, [&]() { pyramide.move(Direction::UP, 0.3); });
+    window.addKeyAction(GLFW_KEY_S, [&]() { pyramide.move(Direction::DOWN, 0.3); });
+    window.addKeyAction(GLFW_KEY_A, [&]() { pyramide.move(Direction::LEFT, 0.3); });
+    window.addKeyAction(GLFW_KEY_D, [&]() { pyramide.move(Direction::RIGHT, 0.3); });
+
+    window.addKeyAction(GLFW_KEY_DOWN, [&]() { pyramide.scale(Direction::UP, 0.04); });
+    window.addKeyAction(GLFW_KEY_UP, [&]() { pyramide.scale(Direction::DOWN, 0.05); });
+    window.addKeyAction(GLFW_KEY_RIGHT, [&]() { pyramide.rotate(Direction::RIGHT, 5); });
 
     while (!window.shouldClose()) {
         glfwPollEvents();
@@ -52,13 +51,6 @@ int main() {
         shaderProgram.setUniform("projection", projection);
 
         pyramide.draw();
-
-        cube.applyTransformations("model", {
-            std::make_shared<Translation>(glm::vec3(0, -3.2 * SCALE_FACTOR, -2.5)),
-            std::make_shared<Scale>(glm::vec3(1.1, 0.03, 0.7)),
-        });
-        cube.setColor(Color(Color::RED +Color::YELLOW * 0.5f));
-        //Renderer::draw(cube);
 
         shaderProgram.unbind();
         window.swapBuffers();

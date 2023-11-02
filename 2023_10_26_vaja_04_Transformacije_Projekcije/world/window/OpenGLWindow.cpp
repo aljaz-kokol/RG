@@ -2,6 +2,11 @@
 #include <exception>
 #include <iostream>
 
+void OpenGLWindow::handleKeyPress(GLFWwindow *window, int key, int scancode, int action, int mods) {
+    OpenGLWindow* owner = static_cast<OpenGLWindow*>(glfwGetWindowUserPointer(window));
+    owner->keyboard.handleOnKeyAction(key, action);
+}
+
 OpenGLWindow::OpenGLWindow(const std::string &name, GLint width, GLint height)
         : window(nullptr), bufferHeight(0), bufferWidth(0) {
     if (!glfwInit()) {
@@ -33,6 +38,9 @@ OpenGLWindow::OpenGLWindow(const std::string &name, GLint width, GLint height)
     glViewport(0, 0, bufferWidth, bufferHeight);
     glEnable(GL_DEPTH_TEST);
     glewExperimental = GL_TRUE;
+
+    glfwSetWindowUserPointer(window.get(), this);
+    glfwSetKeyCallback(window.get(), OpenGLWindow::handleKeyPress);
 }
 
 OpenGLWindow::~OpenGLWindow() {
@@ -58,4 +66,8 @@ GLint OpenGLWindow::getBufferHeight() const {
 
 void OpenGLWindow::closeWindow() const {
     glfwSetWindowShouldClose(window.get(), GL_TRUE);
+}
+
+void OpenGLWindow::addKeyAction(uint16_t key, const std::function<void()> &action) {
+    keyboard.setOnPress(key, action);
 }

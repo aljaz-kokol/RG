@@ -10,3 +10,11 @@ glm::mat4 Translation::transform() const {
     return glm::translate(model, values);
 }
 
+const glm::vec3 &Translation::getValues() const {
+    return values;
+}
+
+void Translation::setValues(const glm::vec3 &values) {
+    Translation::values = values;
+}
+

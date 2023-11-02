@@ -4,26 +4,25 @@
 #include <unordered_map>
 #include <string>
 #include "../Cuboid.h"
-
-struct CuboidShapeElement {
-    Color color;
-    std::vector<std::shared_ptr<Transformation>> transformations;
-};
+#include "cuboid-shape-element/CuboidShapeElement.h"
 
 struct CuboidShapeElementDescriptor {
-    std::string_view name;
+    glm::vec3 positions;
     Color color;
-    std::array<float, 3> positions;
 };
 
 class CuboidShape {
 private:
-    float scale;
+    float scaleFactor;
     const Cuboid& cuboid;
-    std::unordered_map<std::string_view , CuboidShapeElement> elements;
+    std::vector<CuboidShapeElement> elements;
 public:
     CuboidShape(const Cuboid& cuboid, const std::vector<CuboidShapeElementDescriptor>& elements, float scale = 1.0f);
     void draw() const;
+    void move(Direction direction, float value);
+    void scale(Direction direction, float value);
+    void rotate(Direction direction, float value);
+
 };
 
 

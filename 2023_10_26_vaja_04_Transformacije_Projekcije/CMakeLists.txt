@@ -41,6 +41,8 @@ add_executable(2023_10_26_vaja_04_Transformacije_Projekcije main.cpp
         color/Color.h
         object/cuboid/cuboid-shape/CuboidShape.cpp
         object/cuboid/cuboid-shape/CuboidShape.h
+        object/cuboid/cuboid-shape/cuboid-shape-element/CuboidShapeElement.cpp
+        world/io/keyboard/Keyboard.cpp
 )
 
 target_link_libraries(2023_10_26_vaja_04_Transformacije_Projekcije glfw glm::glm GLEW::GLEW OpenGL::GL)

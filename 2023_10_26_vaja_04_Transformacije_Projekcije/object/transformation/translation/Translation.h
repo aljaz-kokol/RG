@@ -9,6 +9,9 @@ private:
 public:
     explicit Translation(const glm::vec3& values);
    [[nodiscard]] glm::mat4 transform() const override;
+   [[nodiscard]] const glm::vec3 &getValues() const;
+
+    void setValues(const glm::vec3 &values);
 };
 
 #endif

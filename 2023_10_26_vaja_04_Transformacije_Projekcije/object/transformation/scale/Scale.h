@@ -10,6 +10,9 @@ public:
     explicit Scale(const glm::vec3& factors);
     explicit Scale(float factor);
     [[nodiscard]] glm::mat4 transform() const override;
+    [[nodiscard]] const glm::vec3 &getFactors() const;
+
+    void setFactors(const glm::vec3 &factors);
 };
 
 

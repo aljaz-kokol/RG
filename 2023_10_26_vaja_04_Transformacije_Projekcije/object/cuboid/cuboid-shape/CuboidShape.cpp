@@ -4,25 +4,39 @@
 #include "../../../renderer/Renderer.h"
 #include <ranges>
 
-CuboidShape::CuboidShape(const Cuboid &cuboid, const std::vector<CuboidShapeElementDescriptor>& elements, float scale): scale(scale), cuboid(cuboid) {
+CuboidShape::CuboidShape(const Cuboid &cuboid, const std::vector<CuboidShapeElementDescriptor>& elements, float scale): scaleFactor(scale), cuboid(cuboid) {
     for (const CuboidShapeElementDescriptor& element: elements) {
-        this->elements[element.name] = { element.color, {
-            std::make_shared<Translation>(
-                glm::vec3(
-                    2 * scale * element.positions[0] * cuboid.getWidth(),
-                    2 * scale * element.positions[1] * cuboid.getHeight(),
-                    2 * element.positions[2] * cuboid.getDepth()
-                )
-            ),
-            std::make_shared<Scale>(scale),
-        } };
+        this->elements.emplace_back(cuboid, element.positions, element.color, scale);
     }
 }
 
 void CuboidShape::draw() const {
+    glm::vec3 center(1);
+    for (const CuboidShapeElement& element : elements) {
+        center += element.getPositions();
+    }
+    center /= elements.size();
     for (const auto& element : elements) {
-        cuboid.applyTransformations("model", element.second.transformations);
-        cuboid.setColor(element.second.color);
+        cuboid.applyTransformations("model", element.getTransformationsWithCenter(center));
+        cuboid.setColor(element.getColor());
         Renderer::draw(cuboid);
+    }
+}
+
+void CuboidShape::move(Direction direction, float value) {
+    for (CuboidShapeElement& element : elements) {
+        element.move(direction, value);
+    }
+}
+
+void CuboidShape::rotate(Direction direction, float value) {
+    for (CuboidShapeElement& element : elements) {
+        element.rotate(direction, value);
+    }
+}
+
+void CuboidShape::scale(Direction direction, float value) {
+    for (CuboidShapeElement& element : elements) {
+        element.scale(direction, value);
     }
 }

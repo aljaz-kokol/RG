@@ -7,3 +7,11 @@
 7	365	1697704135602351356	CMakeFiles/2023_10_12_vaja_2_piramida.dir/shader/ShaderProgram.cpp.o	322cdec3de9568d
 335	375	1697994848248766827	2023_10_12_vaja_2_piramida	665185b761794ef2
 4	141	1697994461077788515	CMakeFiles/2023_10_12_vaja_2_piramida.dir/world/io/keyboard/Keyboard.cpp.o	4f77865407111e82
+1	164	1698947334450754158	CMakeFiles/2023_10_12_vaja_2_piramida.dir/world/camera/Camera.cpp.o	b17cbf72da62e5e4
+1	198	1698947334484733452	CMakeFiles/2023_10_12_vaja_2_piramida.dir/world/io/keyboard/Keyboard.cpp.o	ac718a763ead5ccd
+0	352	1698947334636112208	CMakeFiles/2023_10_12_vaja_2_piramida.dir/world/window/OpenGLWindow.cpp.o	7e324b343ba018f9
+1	366	1698947334652649807	CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Cuboid/Cuboid.cpp.o	80fbc4ebf6f2556c
+0	375	1698947334661545969	CMakeFiles/2023_10_12_vaja_2_piramida.dir/object/Mesh.cpp.o	25a944f7adaef55
+0	396	1698947334682462877	CMakeFiles/2023_10_12_vaja_2_piramida.dir/shader/ShaderProgram.cpp.o	2949b39bba0388d4
+0	434	1698947334720173054	CMakeFiles/2023_10_12_vaja_2_piramida.dir/main.cpp.o	a79c3367ed3b9012
+434	478	1698947334767052772	2023_10_12_vaja_2_piramida	44ba15eeda69fd89
