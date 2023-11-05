@@ -23,17 +23,16 @@ void Camera::update() {
 }
 
 glm::mat4 Camera::getViewMatrix() const {
-//    glm::vec3 cameraRight = glm::normalize(glm::cross(up, -front));
-//    glm::vec3 cameraUp = glm::normalize(glm::cross(-front, cameraRight));
-//
-//    glm::mat4 viewMatrix = {
-//            glm::vec4(cameraRight.x, up.x, -front.x, 0.0f),
-//            glm::vec4(cameraRight.y, up.y, -front.y, 0.0f),
-//            glm::vec4(cameraRight.z, up.z, -front.z, 0.0f),
-//            glm::vec4(-glm::dot(cameraRight, position), -glm::dot(up, position), glm::dot(front, position), 1.0f)
-//    };
+    glm::vec3 cameraRight = glm::normalize(glm::cross(up, -front));
+    glm::vec3 cameraUp = glm::normalize(glm::cross(-front, cameraRight));
 
-    return glm::lookAt(position, position + front, up);
+    glm::mat4 viewMatrix = {
+            glm::vec4(cameraRight.x, up.x, -front.x, 0.0f),
+            glm::vec4(cameraRight.y, up.y, -front.y, 0.0f),
+            glm::vec4(cameraRight.z, up.z, -front.z, 0.0f),
+            glm::vec4(-glm::dot(cameraRight, position), -glm::dot(up, position), glm::dot(front, position), 1.0f)
+    };
+    return viewMatrix;
 }
 
 void Camera::move(Direction direction, GLfloat deltaTime) {
