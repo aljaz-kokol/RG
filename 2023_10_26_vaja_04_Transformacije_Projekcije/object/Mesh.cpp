@@ -22,6 +22,10 @@ void Mesh::setColor(const Color& color) const {
     shader.setUniform("meshColor", color.getValues());
 }
 
+void Mesh::setColor(const glm::vec4& color) const {
+    shader.setUniform("meshColor", color);
+}
+
 const VertexArray &Mesh::getVao() const {
     return vao;
 }
@@ -36,4 +40,8 @@ const IndexBuffer &Mesh::getIbo() const {
 
 const ShaderProgram &Mesh::getShaderProgram() const {
     return shader;
+}
+
+void Mesh::draw() const {
+    Renderer::draw(*this);
 }

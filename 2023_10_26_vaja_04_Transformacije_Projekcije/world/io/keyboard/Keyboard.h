@@ -9,17 +9,17 @@
 
 class Keyboard {
 private:
-    std::unordered_map<uint16_t, std::function<void()>> actions;
-    std::array<bool, 1024> keys;
-    std::unordered_set<uint16_t> pressedKeys;
-
-    bool checkForKeyCombinations() const;
+    std::unordered_map<uint32_t, std::function<void(GLfloat)>> actions;
+    std::array<bool, 5000> keys;
+    std::unordered_set<uint32_t> pressedKeys;
+    [[nodiscard]] std::vector<uint32_t> keyList(uint32_t combination) const;
 public:
     Keyboard();
-    [[nodiscard]] bool isPressed(uint16_t key) const noexcept;
-    void execute(uint16_t key) const;
-    void setOnPress(uint16_t key, const std::function<void()>& action);
-    void handleOnKeyAction(uint16_t key, int action);
+    [[nodiscard]] bool isPressed(uint32_t key) const noexcept;
+    void execute(uint32_t key, GLfloat deltaTime) const;
+    void setOnPress(uint32_t key, const std::function<void(GLfloat)>& action);
+    void handleOnKeyAction(uint32_t key, int action, GLfloat deltaTime);
+    void handlePressedKeys(GLfloat deltaTime) const;
 };
 
 #endif

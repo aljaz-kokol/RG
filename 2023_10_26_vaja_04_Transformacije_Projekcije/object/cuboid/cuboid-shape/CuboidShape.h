@@ -19,9 +19,9 @@ private:
 public:
     CuboidShape(const Cuboid& cuboid, const std::vector<CuboidShapeElementDescriptor>& elements, float scale = 1.0f);
     void draw() const;
-    void move(Direction direction, float value);
-    void scale(Direction direction, float value);
-    void rotate(Direction direction, float value);
+    void move(Direction direction, float value, GLfloat delta = 1.0);
+    void scale(Direction direction, float value, GLfloat delta = 1.0);
+    void rotate(Direction direction, float value, GLfloat delta = 1.0);
 
 };
 

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Shader.h"
 
-Shader::Shader(std::string_view fileName, GLenum type): id(0), type(type) {
+ Shader::Shader(std::string_view fileName, GLenum type): id(0), type(type) {
     id = glCreateShader(type);
     std::ifstream file(fileName);
     if (!file.is_open()) {

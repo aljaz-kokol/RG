@@ -11,9 +11,9 @@ CuboidShape::CuboidShape(const Cuboid &cuboid, const std::vector<CuboidShapeElem
 }
 
 void CuboidShape::draw() const {
-    glm::vec3 center(1);
+    glm::vec3 center(0);
     for (const CuboidShapeElement& element : elements) {
-        center += element.getPositions();
+        center += element.getTranslation().getValues();
     }
     center /= elements.size();
     for (const auto& element : elements) {
@@ -23,20 +23,20 @@ void CuboidShape::draw() const {
     }
 }
 
-void CuboidShape::move(Direction direction, float value) {
+void CuboidShape::move(Direction direction, float value, GLfloat delta) {
     for (CuboidShapeElement& element : elements) {
-        element.move(direction, value);
+        element.move(direction, value, delta);
     }
 }
 
-void CuboidShape::rotate(Direction direction, float value) {
+void CuboidShape::rotate(Direction direction, float value, GLfloat delta) {
     for (CuboidShapeElement& element : elements) {
-        element.rotate(direction, value);
+        element.rotate(direction, value, delta);
     }
 }
 
-void CuboidShape::scale(Direction direction, float value) {
+void CuboidShape::scale(Direction direction, float value, GLfloat delta) {
     for (CuboidShapeElement& element : elements) {
-        element.scale(direction, value);
+        element.scale(direction, value, delta);
     }
 }

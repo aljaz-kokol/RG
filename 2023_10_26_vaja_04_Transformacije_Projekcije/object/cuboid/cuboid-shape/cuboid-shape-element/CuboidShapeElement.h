@@ -24,10 +24,12 @@ public:
     [[nodiscard]] const glm::vec3 &getPositions() const;
     [[nodiscard]] std::vector<std::shared_ptr<Transformation>> getTransformations() const;
     [[nodiscard]] std::vector<std::shared_ptr<Transformation>> getTransformationsWithCenter(const glm::vec3& center) const;
+    [[nodiscard]] const Translation &getTranslation() const;
 
-    void scale(Direction direction, float increment);
-    void move(Direction direction, float value);
-    void rotate(Direction direction, float value);
+
+    void scale(Direction direction, float increment, GLfloat delta = 1.0);
+    void move(Direction direction, float value, GLfloat delta = 1.0);
+    void rotate(Direction direction, float value, GLfloat delta = 1.0);
 };
 
 #endif

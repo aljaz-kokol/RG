@@ -27,7 +27,7 @@ std::vector<std::shared_ptr<Transformation>> CuboidShapeElement::getTransformati
 
 
 
-void CuboidShapeElement::scale(Direction direction, float increment) {
+void CuboidShapeElement::scale(Direction direction, float increment, GLfloat delta) {
     if (direction == Direction::UP) {
         scaleTrans.setFactors(scaleTrans.getFactors() + increment);
     } else {
@@ -40,15 +40,20 @@ void CuboidShapeElement::scale(Direction direction, float increment) {
     ));
 }
 
-void CuboidShapeElement::move(Direction direction, float value) {
+void CuboidShapeElement::move(Direction direction, float value, GLfloat delta) {
+    const GLfloat VELOCITY = value * delta;
     if (direction == Direction::LEFT) {
-        positions[0] -= value;
+        positions[0] -= value * VELOCITY;
     } else if (direction == Direction::RIGHT) {
-        positions[0] += value;
+        positions[0] += value * VELOCITY;
     } else if (direction == Direction::UP) {
-        positions[1] += value;
+        positions[1] += value * VELOCITY;
     } else if (direction == Direction::DOWN) {
-        positions[1] -= value;
+        positions[1] -= value * VELOCITY;
+    } else if (direction == Direction::FRONT) {
+        positions[2] += value * VELOCITY;
+    } else if (direction == Direction::BACK) {
+        positions[2] -= value * VELOCITY;
     }
 
     translation.setValues(glm::vec3(
@@ -58,10 +63,16 @@ void CuboidShapeElement::move(Direction direction, float value) {
     ));
 }
 
-void CuboidShapeElement::rotate(Direction direction, float value) {
+void CuboidShapeElement::rotate(Direction direction, float value, GLfloat delta) {
+    const GLfloat VELOCITY = value * delta;
     if (direction == Direction::RIGHT) {
-        rotation.setAngle(rotation.getAngle() + value);
-        rotation.setAxis({ 0, 1, 0 });
+        rotation.setYAngle(rotation.getAngles().y + value* VELOCITY);
+    } else if (direction == Direction::LEFT) {
+        rotation.setYAngle(rotation.getAngles().y - value * VELOCITY);
+    } else if (direction == Direction::UP) {
+        rotation.setXAngle(rotation.getAngles().x + value * VELOCITY);
+    } else if (direction == Direction::DOWN) {
+        rotation.setXAngle(rotation.getAngles().x - value * VELOCITY);
     }
 }
 
@@ -71,4 +82,8 @@ const Color &CuboidShapeElement::getColor() const {
 
 const glm::vec3 &CuboidShapeElement::getPositions() const {
     return positions;
+}
+
+const Translation &CuboidShapeElement::getTranslation() const {
+    return translation;
 }

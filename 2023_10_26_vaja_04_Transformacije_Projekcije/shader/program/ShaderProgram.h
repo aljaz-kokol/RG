@@ -9,8 +9,7 @@
 class ShaderProgram {
 private:
     GLuint id;
-    std::vector<Shader> shaders;
-    std::unordered_map<std::string_view, GLint> uniformLocationCache;
+    const std::vector<Shader> shaders;
     [[nodiscard]] GLint getUniformLocation(std::string_view uniformName) const;
 public:
     explicit ShaderProgram(const std::vector<Shader>& shaders);

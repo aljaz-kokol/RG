@@ -6,15 +6,19 @@
 class Rotation : public Transformation {
 private:
     glm::vec3 axis;
-    float angle;
+    glm::vec3 angles;
 public:
     explicit Rotation(float angle, const glm::vec3 &factors);
     [[nodiscard]] glm::mat4 transform() const override;
     [[nodiscard]] const glm::vec3 &getAxis() const;
-    [[nodiscard]] float getAngle() const;
+    [[nodiscard]] const glm::vec3 &getAngles() const;
+
+    void setAngles(const glm::vec3 &angles);
+    void setXAngle(float angle);
+    void setYAngle(float angle);
+    void setZAngle(float angle);
 
     void setAxis(const glm::vec3 &axis);
-    void setAngle(float angle);
 };
 
 #endif

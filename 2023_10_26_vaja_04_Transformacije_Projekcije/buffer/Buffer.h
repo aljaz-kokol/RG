@@ -29,7 +29,7 @@ void Buffer<T>::unbind() const {
 template<typename T>
 Buffer<T>::~Buffer() {
     if (id != 0) {
-        glDeleteBuffers(1, reinterpret_cast<const GLuint *>(id));
+        glDeleteBuffers(1, &id);
     }
 }
 

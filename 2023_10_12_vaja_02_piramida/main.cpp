@@ -32,29 +32,37 @@ int main() {
         shaderProgram.use();
         glUniformMatrix4fv(shaderProgram.getProjectionLocation(), 1, GL_FALSE, glm::value_ptr(projection));
 
-        cube.translate(glm::vec3(-0.3, -0.6f, -2.5f));
+        glm::vec3 center = (glm::vec3(-0.3, -0.6f, -2.5f) + glm::vec3(0.3, -0.6f, -2.5f) + glm::vec3(0.0f, 0.0f, -2.5f)) / 3.0f;
+
+        cube.translate(center);
+        cube.rotateXYZ(45, {0, 1, 0});
+        cube.translate(glm::vec3(-0.3, -0.6f, -2.5f) - center);
         cube.scale(0.3f);
         cube.applyTransformations();
         cube.setColor({1.0, 1.0, 0.0, 1.0});
         cube.draw();
 
-        cube.translate(glm::vec3(0.3, -0.6f, -2.5f));
+        cube.translate(center);
+        cube.rotateXYZ(45, {0, 1, 0});
+        cube.translate(glm::vec3(0.3, -0.6f, -2.5f) - center);
         cube.scale(0.3f);
         cube.applyTransformations();
         cube.setColor({1.0, 0.0, 0.0, 1.0});
         cube.draw();
 
-        cube.translate(glm::vec3(0.0f, 0.0f, -2.5f));
+        cube.translate(center);
+        cube.rotateXYZ(45, {0, 1, 0});
+        cube.translate(glm::vec3(0.0f, 0.0f, -2.5f) - center);
         cube.scale(0.3f);
         cube.applyTransformations();
         cube.setColor({1.0, 0.0, 1.0, 1.0});
         cube.draw();
 
-        floor.translate( glm::vec3(0, -0.9f, -2.5f));
-        floor.scale(0.3f);
-        floor.applyTransformations();
-        floor.setColor({0.0, 1.0, 0.0, 1.0});
-        floor.draw();
+//        floor.translate( glm::vec3(0, -0.9f, -2.5f));
+//        floor.scale(0.3f);
+//        floor.applyTransformations();
+//        floor.setColor({0.0, 1.0, 0.0, 1.0});
+//        floor.draw();
 
         glUseProgram(0);
         window.swapBuffers();

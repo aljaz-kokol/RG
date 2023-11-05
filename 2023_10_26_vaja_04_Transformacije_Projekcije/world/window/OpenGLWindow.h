@@ -6,23 +6,37 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "../io/keyboard/Keyboard.h"
+#include "../io/mouse/Mouse.h"
+#include "../camera/Camera.h"
+#include "../../shader/program/ShaderProgram.h"
 
 class OpenGLWindow {
 private:
     static void handleKeyPress(GLFWwindow* window, int key, int scancode, int action, int mods);
+    static void handeMouseMove(GLFWwindow* window, double xPos, double yPos);
+    Keyboard keyboard;
+    Mouse mouse;
+    Camera camera;
+
+    glm::mat4 projection;
+
     std::shared_ptr<GLFWwindow> window;
     GLint bufferWidth;
     GLint bufferHeight;
-    Keyboard keyboard;
+
+    GLfloat deltaTime;
 public:
-    OpenGLWindow(const std::string &name, GLint width, GLint height);
+    OpenGLWindow(std::string_view name, GLint width, GLint height);
     ~OpenGLWindow();
     void closeWindow() const;
     void swapBuffers() const;
-    void addKeyAction(uint16_t key, const std::function<void()>& action);
     [[nodiscard]] bool shouldClose() const;
-    [[nodiscard]] GLint getBufferWidth() const;
-    [[nodiscard]] GLint getBufferHeight() const;
+    void setProjectionToPerspective();
+    void setProjectionToOrthographic();
+    void addKeyAction(uint16_t key, const std::function<void(GLfloat)>& action);
+    void setKeyActions(const std::vector<std::pair<uint16_t, const std::function<void(GLfloat)>>>& actions);
+    void run(const ShaderProgram& program, const std::function<void()>& func);
+    void moveCamera(Direction direction);
 };
 
 

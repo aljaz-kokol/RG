@@ -7,10 +7,8 @@
 #include "object/cuboid/cuboid-shape/CuboidShape.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include <memory>
 
 int main() {
-    float SCALE_FACTOR = 0.3;
     OpenGLWindow window("02 - piramida", 800, 800);
 
     ShaderProgram shaderProgram({
@@ -18,9 +16,14 @@ int main() {
         { "fragment.frag", GL_FRAGMENT_SHADER }
     });
 
-    Cuboid cube(shaderProgram, 1, 1, 1);
 
-    CuboidShape pyramide(
+    Cuboid cube(shaderProgram, 1, 1, 1);
+    const std::vector<std::shared_ptr<Transformation>> FLOOR_TRANSFORMATIONS = {
+        std::make_unique<Translation>(glm::vec3(0, -0.9, -3.05)),
+        std::make_unique<Scale>(glm::vec3(1.3, 0.01, 1.3 )),
+    };
+
+    CuboidShape pyramid(
         cube,
         {
             { { -1, -1, -1.5 }, Color(Color::BLUE) }, { { 0, -1, -1.5 }, Color(Color::YELLOW) }, { { 1, -1, -1.5 }, Color(Color::RED) },
@@ -32,29 +35,39 @@ int main() {
 
     shaderProgram.compile();
 
-    glm::mat4 projection = glm::perspective(glm::radians(70.0f), (GLfloat) window.getBufferWidth() / (GLfloat) window.getBufferHeight(), 0.1f, 100.0f);
+    window.setKeyActions({
+         { GLFW_KEY_ESCAPE, [&](GLfloat delta) { window.closeWindow(); } },
+         // Pyramid movement
+//         { GLFW_KEY_W + GLFW_KEY_LEFT_SHIFT, [&](GLfloat delta) { pyramid.move(Direction::UP, 2.5, delta); } },
+//         { GLFW_KEY_S + GLFW_KEY_LEFT_SHIFT, [&](GLfloat delta) { pyramid.move(Direction::DOWN, 2.5, delta);} },
+//         { GLFW_KEY_A + GLFW_KEY_LEFT_SHIFT, [&](GLfloat delta) { pyramid.move(Direction::LEFT, 2.5, delta); } },
+//         { GLFW_KEY_D + GLFW_KEY_LEFT_SHIFT, [&](GLfloat delta) { pyramid.move(Direction::RIGHT, 2.5, delta); } },
+//         { GLFW_KEY_Q + GLFW_KEY_LEFT_SHIFT, [&](GLfloat delta) { pyramid.move(Direction::FRONT, 2.5, delta); } },
+//         { GLFW_KEY_E + GLFW_KEY_LEFT_SHIFT, [&](GLfloat delta) { pyramid.move(Direction::BACK, 2.5, delta); } },
+         // Camera movement
+         { GLFW_KEY_W, [&](GLfloat delta) { window.moveCamera(Direction::FRONT); } },
+         { GLFW_KEY_S, [&](GLfloat delta) { window.moveCamera(Direction::BACK); } },
+         { GLFW_KEY_A, [&](GLfloat delta) { window.moveCamera(Direction::LEFT); } },
+         { GLFW_KEY_D, [&](GLfloat delta) { window.moveCamera(Direction::RIGHT); } },
+         // Pyramid scale
+         { GLFW_KEY_UP + GLFW_KEY_LEFT_SHIFT, [&](GLfloat delta) { pyramid.scale(Direction::UP, 0.005); } },
+         { GLFW_KEY_DOWN + GLFW_KEY_LEFT_SHIFT, [&](GLfloat delta) { pyramid.scale(Direction::DOWN, 0.005); } },
+         // Pyramid rotation
+         { GLFW_KEY_DOWN, [&](GLfloat delta) { pyramid.rotate(Direction::UP, 12, delta); } },
+         { GLFW_KEY_UP, [&](GLfloat delta) { pyramid.rotate(Direction::DOWN, 12, delta); } },
+         { GLFW_KEY_RIGHT, [&](GLfloat delta) { pyramid.rotate(Direction::RIGHT, 12, delta); } },
+         { GLFW_KEY_LEFT, [&](GLfloat delta) { pyramid.rotate(Direction::LEFT, 12, delta); } },
+         // Projection Change
+         { GLFW_KEY_P, [&](GLfloat delta) { window.setProjectionToPerspective(); } },
+         { GLFW_KEY_O, [&](GLfloat delta) { window.setProjectionToOrthographic(); } }
+    });
 
-    window.addKeyAction(GLFW_KEY_W, [&]() { pyramide.move(Direction::UP, 0.3); });
-    window.addKeyAction(GLFW_KEY_S, [&]() { pyramide.move(Direction::DOWN, 0.3); });
-    window.addKeyAction(GLFW_KEY_A, [&]() { pyramide.move(Direction::LEFT, 0.3); });
-    window.addKeyAction(GLFW_KEY_D, [&]() { pyramide.move(Direction::RIGHT, 0.3); });
-
-    window.addKeyAction(GLFW_KEY_DOWN, [&]() { pyramide.scale(Direction::UP, 0.04); });
-    window.addKeyAction(GLFW_KEY_UP, [&]() { pyramide.scale(Direction::DOWN, 0.05); });
-    window.addKeyAction(GLFW_KEY_RIGHT, [&]() { pyramide.rotate(Direction::RIGHT, 5); });
-
-    while (!window.shouldClose()) {
-        glfwPollEvents();
-        Renderer::clear();
-
-        shaderProgram.bind();
-        shaderProgram.setUniform("projection", projection);
-
-        pyramide.draw();
-
-        shaderProgram.unbind();
-        window.swapBuffers();
-    }
+    window.run(shaderProgram, [&]() {
+        pyramid.draw();
+        cube.applyTransformations("model", FLOOR_TRANSFORMATIONS);
+        cube.setColor(Color::RED + Color::YELLOW * 0.5f);
+        cube.draw();
+    });
 
     return 0;
 }

@@ -24,11 +24,14 @@ public:
     Mesh(const ShaderProgram& shader, const std::vector<GLfloat>& vertices, const std::vector<unsigned int>& indices);
     void applyTransformations(std::string_view uniformVariable, const std::vector<std::shared_ptr<Transformation>> &transformations) const;
     void setColor(const Color& color) const;
+    void setColor(const glm::vec4& color) const;
 
     const VertexArray &getVao() const;
     const VertexBuffer &getVbo() const;
     const IndexBuffer &getIbo() const;
     [[nodiscard]] const ShaderProgram &getShaderProgram() const;
+
+    void draw() const;
 };
 
 

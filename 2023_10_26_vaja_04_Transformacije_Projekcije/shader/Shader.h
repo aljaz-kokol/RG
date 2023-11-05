@@ -15,7 +15,7 @@ private:
 public:
     Shader(std::string_view fileName, GLenum type);
     void compile() const;
-    GLuint getId() const;
+    [[nodiscard]] GLuint getId() const;
 };
 
 

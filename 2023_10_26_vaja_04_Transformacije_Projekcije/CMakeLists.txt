@@ -43,6 +43,10 @@ add_executable(2023_10_26_vaja_04_Transformacije_Projekcije main.cpp
         object/cuboid/cuboid-shape/CuboidShape.h
         object/cuboid/cuboid-shape/cuboid-shape-element/CuboidShapeElement.cpp
         world/io/keyboard/Keyboard.cpp
+        world/camera/Camera.cpp
+        world/camera/Camera.h
+        world/io/mouse/Mouse.cpp
+        world/io/mouse/Mouse.h
 )
 
 target_link_libraries(2023_10_26_vaja_04_Transformacije_Projekcije glfw glm::glm GLEW::GLEW OpenGL::GL)

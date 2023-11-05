@@ -3,24 +3,24 @@
 
 Keyboard::Keyboard(): keys({ false }) {}
 
-bool Keyboard::isPressed(uint16_t key) const noexcept {
+bool Keyboard::isPressed(uint32_t key) const noexcept {
     if (key >= 1024) return false;
     return keys[key];
 }
 
-void Keyboard::execute(uint16_t key) const {
+void Keyboard::execute(uint32_t key, GLfloat delta) const {
     if (actions.contains(key)) {
-        actions.at(key)();
+        actions.at(key)(delta);
     }
 }
 
-void Keyboard::setOnPress(uint16_t key, const std::function<void()>& action) {
+void Keyboard::setOnPress(uint32_t key, const std::function<void(GLfloat)>& action) {
     if (key >= 1024) return;
     actions[key] = action;
 }
 
-void Keyboard::handleOnKeyAction(uint16_t key, int action) {
-    if (key >= 1024) return;
+void Keyboard::handleOnKeyAction(uint32_t key, int action, GLfloat deltaTime) {
+    if (key >= 5000) return;
     if (action == GLFW_PRESS) {
         keys[key] = true;
         pressedKeys.insert(key);
@@ -29,20 +29,27 @@ void Keyboard::handleOnKeyAction(uint16_t key, int action) {
         pressedKeys.erase(key);
     }
 
-    std::unordered_set<uint16_t> unusableKeys;
+}
+
+void Keyboard::handlePressedKeys(GLfloat deltaTime) const {
+    std::unordered_set<uint32_t> usableKeys(pressedKeys);
     for (const auto& entry : actions) {
-        const uint16_t combination = entry.first;
-        for (uint16_t key1 : pressedKeys) {
-            if (unusableKeys.contains(key1)) continue;
-            for (uint16_t key2 : pressedKeys) {
-                if (unusableKeys.contains(key2)) break;
-                if (combination == (key1 | key2)) {
-                    execute(combination);
-                    unusableKeys.insert(key1);
-                    unusableKeys.insert(key2);
+        const uint32_t combination = entry.first;
+        for (uint32_t key1 : pressedKeys) {
+            if (!usableKeys.contains(key1)) continue;
+            for (uint32_t key2 : pressedKeys) {
+                if (!usableKeys.contains(key2)) break;
+                if (combination == (key1 + key2)) {
+                    execute(combination, deltaTime);
+                    usableKeys.erase(key1);
+                    usableKeys.erase(key2);
                 }
             }
         }
+    }
+
+    for (uint32_t key  : usableKeys) {
+        execute(key, deltaTime);
     }
 }
 
