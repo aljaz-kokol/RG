@@ -1,0 +1,14 @@
+#ifndef INC_2023_10_26_VAJA_04_TRANSFORMACIJE_PROJEKCIJE_ROTATIONDIRECTION_H
+#define INC_2023_10_26_VAJA_04_TRANSFORMACIJE_PROJEKCIJE_ROTATIONDIRECTION_H
+
+enum class RotationDirection: int16_t {
+    X_POS = 1,
+    Y_POS = 2,
+    Z_POS = 3,
+
+    X_NEG = -1,
+    Y_NEG = -2,
+    Z_NEG = -3,
+};
+
+#endif

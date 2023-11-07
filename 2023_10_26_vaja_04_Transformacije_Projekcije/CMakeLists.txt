@@ -47,6 +47,7 @@ add_executable(2023_10_26_vaja_04_Transformacije_Projekcije main.cpp
         world/camera/Camera.h
         world/io/mouse/Mouse.cpp
         world/io/mouse/Mouse.h
+        utils/DrawMode.h
 )
 
 target_link_libraries(2023_10_26_vaja_04_Transformacije_Projekcije glfw glm::glm GLEW::GLEW OpenGL::GL)

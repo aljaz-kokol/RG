@@ -10,6 +10,7 @@
 #include "../buffer/vertex/VertexBuffer.h"
 #include "transformation/Transformation.h"
 #include "../color/Color.h"
+#include "../utils/DrawMode.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -30,9 +31,6 @@ public:
     const VertexBuffer &getVbo() const;
     const IndexBuffer &getIbo() const;
     [[nodiscard]] const ShaderProgram &getShaderProgram() const;
-
-    void draw() const;
 };
-
 
 #endif

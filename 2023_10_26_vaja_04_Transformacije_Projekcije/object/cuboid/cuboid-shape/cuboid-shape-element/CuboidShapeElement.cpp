@@ -25,8 +25,6 @@ std::vector<std::shared_ptr<Transformation>> CuboidShapeElement::getTransformati
     });
 }
 
-
-
 void CuboidShapeElement::scale(Direction direction, float increment, GLfloat delta) {
     if (direction == Direction::UP) {
         scaleTrans.setFactors(scaleTrans.getFactors() + increment);
@@ -63,25 +61,20 @@ void CuboidShapeElement::move(Direction direction, float value, GLfloat delta) {
     ));
 }
 
-void CuboidShapeElement::rotate(Direction direction, float value, GLfloat delta) {
+void CuboidShapeElement::rotate(RotationDirection rotationDirection, float value, GLfloat delta) {
     const GLfloat VELOCITY = value * delta;
-    if (direction == Direction::RIGHT) {
-        rotation.setYAngle(rotation.getAngles().y + value* VELOCITY);
-    } else if (direction == Direction::LEFT) {
-        rotation.setYAngle(rotation.getAngles().y - value * VELOCITY);
-    } else if (direction == Direction::UP) {
-        rotation.setXAngle(rotation.getAngles().x + value * VELOCITY);
-    } else if (direction == Direction::DOWN) {
-        rotation.setXAngle(rotation.getAngles().x - value * VELOCITY);
+    int8_t rotationDirValue = static_cast<std::underlying_type<RotationDirection>::type>(rotationDirection) < 0 ? -1 : 1;
+    if (rotationDirection == RotationDirection::X_POS || rotationDirection == RotationDirection::X_NEG) {
+        rotation.setXAngle(rotation.getAngles().x + rotationDirValue * value*  VELOCITY);
+    } else if (rotationDirection == RotationDirection::Y_POS || rotationDirection == RotationDirection::Y_NEG) {
+        rotation.setYAngle(rotation.getAngles().y + rotationDirValue * value* VELOCITY);
+    } else if (rotationDirection == RotationDirection::Z_POS || rotationDirection == RotationDirection::Z_NEG) {
+        rotation.setZAngle(rotation.getAngles().z + rotationDirValue * value* VELOCITY);
     }
 }
 
 const Color &CuboidShapeElement::getColor() const {
     return color;
-}
-
-const glm::vec3 &CuboidShapeElement::getPositions() const {
-    return positions;
 }
 
 const Translation &CuboidShapeElement::getTranslation() const {

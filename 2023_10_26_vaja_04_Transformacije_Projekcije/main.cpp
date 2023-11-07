@@ -52,21 +52,23 @@ int main() {
          { GLFW_KEY_UP + GLFW_KEY_LEFT_SHIFT, [&](GLfloat delta) { pyramid.scale(Direction::UP, 0.005); } },
          { GLFW_KEY_DOWN + GLFW_KEY_LEFT_SHIFT, [&](GLfloat delta) { pyramid.scale(Direction::DOWN, 0.005); } },
          // Pyramid rotation
-         { GLFW_KEY_DOWN, [&](GLfloat delta) { pyramid.rotate(Direction::UP, 12, delta); } },
-         { GLFW_KEY_UP, [&](GLfloat delta) { pyramid.rotate(Direction::DOWN, 12, delta); } },
-         { GLFW_KEY_RIGHT, [&](GLfloat delta) { pyramid.rotate(Direction::RIGHT, 12, delta); } },
-         { GLFW_KEY_LEFT, [&](GLfloat delta) { pyramid.rotate(Direction::LEFT, 12, delta); } },
+         { GLFW_KEY_DOWN, [&](GLfloat delta) { pyramid.rotate(RotationDirection::X_POS, 12, delta); } },
+         { GLFW_KEY_UP, [&](GLfloat delta) { pyramid.rotate(RotationDirection::X_NEG, 12, delta); } },
+         { GLFW_KEY_RIGHT, [&](GLfloat delta) { pyramid.rotate(RotationDirection::Y_POS, 12, delta); } },
+         { GLFW_KEY_LEFT, [&](GLfloat delta) { pyramid.rotate(RotationDirection::Y_NEG, 12, delta); } },
+         { GLFW_KEY_RIGHT + GLFW_KEY_LEFT_SHIFT, [&](GLfloat delta) { pyramid.rotate(RotationDirection::Z_NEG, 12, delta); } },
+         { GLFW_KEY_LEFT + GLFW_KEY_LEFT_SHIFT, [&](GLfloat delta) { pyramid.rotate(RotationDirection::Z_POS, 12, delta); } },
          // Projection Change
          { GLFW_KEY_P, [&](GLfloat delta) { window.setProjectionToPerspective(); } },
          { GLFW_KEY_O, [&](GLfloat delta) { window.setProjectionToOrthographic(); } }
     });
 
     window.run(shaderProgram, [&]() {
-        pyramid.draw();
+        pyramid.draw<DrawMode::TRIANGLES>();
 
         cube.applyTransformations("model", FLOOR_TRANSFORMATIONS);
         cube.setColor(Color::RED + Color::YELLOW * 0.5f);
-        cube.draw();
+        Renderer::draw<DrawMode::TRIANGLES>(cube);
     });
 
     return 0;

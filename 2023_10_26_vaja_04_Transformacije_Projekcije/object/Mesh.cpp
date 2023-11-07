@@ -41,7 +41,3 @@ const IndexBuffer &Mesh::getIbo() const {
 const ShaderProgram &Mesh::getShaderProgram() const {
     return shader;
 }
-
-void Mesh::draw() const {
-    Renderer::draw(*this);
-}
