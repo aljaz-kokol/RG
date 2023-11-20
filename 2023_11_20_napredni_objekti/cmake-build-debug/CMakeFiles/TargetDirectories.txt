@@ -1,0 +1,3 @@
+/Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/cmake-build-debug/CMakeFiles/2023_11_20_napredni_objekti.dir
+/Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/cmake-build-debug/CMakeFiles/rebuild_cache.dir

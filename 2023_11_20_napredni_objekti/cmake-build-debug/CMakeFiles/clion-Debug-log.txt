@@ -1,0 +1,6 @@
+"/Users/aljazkokol/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/232.9921.42/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/aljazkokol/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/232.9921.42/CLion.app/Contents/bin/ninja/mac/ninja" -G Ninja -S /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti -B /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/cmake-build-debug
+-- Found GLEW: /opt/homebrew/lib/cmake/glew/glew-config.cmake  
+-- Found OpenGL: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/OpenGL.framework   
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/cmake-build-debug

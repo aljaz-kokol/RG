@@ -6,9 +6,9 @@ Rotation::Rotation(float angle, const glm::vec3 &factors)
 
 glm::mat4 Rotation::transform() const {
     glm::mat4 model(1);
-    model = glm::rotate(model, glm::radians(angles.x), {1, 0, 0});
-    model = glm::rotate(model, glm::radians(angles.y), {0, 1, 0});
-    model = glm::rotate(model, glm::radians(angles.z), {0, 0, 1});
+    model = glm::rotate(model, glm::radians(angles.x), {axis.x, 0, 0});
+    model = glm::rotate(model, glm::radians(angles.y), {0, axis.y, 0});
+    model = glm::rotate(model, glm::radians(angles.z), {0, 0, axis.z});
     return model;
 }
 

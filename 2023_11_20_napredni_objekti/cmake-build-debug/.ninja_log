@@ -1,0 +1,27 @@
+# ninja log v5
+1	48	1700516009336460545	build.ninja	7b88710e0f8f437c
+1	201	1700516009541409072	CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/index/IndexBuffer.cpp.o	b979cc34ca1c3a6d
+1	208	1700516009548517195	CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/vertex/VertexBuffer.cpp.o	c984ca5639aa3e77
+202	408	1700516009749253364	CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/layout/BufferLayout.cpp.o	edcf9e597195c2b3
+1	564	1700516009903517981	CMakeFiles/2023_11_20_napredni_objekti.dir/vertex_array/VertexArray.cpp.o	1af081ddb669f7e2
+1	566	1700516009905622743	CMakeFiles/2023_11_20_napredni_objekti.dir/object/Mesh.cpp.o	c070c8439008e90
+1	595	1700516009933047480	CMakeFiles/2023_11_20_napredni_objekti.dir/world/window/OpenGLWindow.cpp.o	f960e5fc87c245cb
+1	596	1700516009933403816	CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/Cuboid.cpp.o	fa15d42025adcce8
+208	629	1700516009969121516	CMakeFiles/2023_11_20_napredni_objekti.dir/shader/Shader.cpp.o	52c1236d39b51b66
+1	661	1700516010000508026	CMakeFiles/2023_11_20_napredni_objekti.dir/shader/program/ShaderProgram.cpp.o	25074af49cbffd86
+564	707	1700516010047796542	CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/scale/Scale.cpp.o	f95d5053d983f4cb
+595	743	1700516010084711457	CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/rotation/Rotation.cpp.o	5e9084701fe37b28
+629	778	1700516010120352491	CMakeFiles/2023_11_20_napredni_objekti.dir/color/Color.cpp.o	c0a5e4b8111ffce4
+778	841	1700516010183852514	CMakeFiles/2023_11_20_napredni_objekti.dir/world/io/mouse/Mouse.cpp.o	9502ba82be43d4e9
+596	963	1700516010302926767	CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/translation/Translation.cpp.o	269d0bcfffbb2079
+408	1034	1700516010373151536	CMakeFiles/2023_11_20_napredni_objekti.dir/renderer/Renderer.cpp.o	c3db76957a482ed0
+0	1038	1700516010375542924	CMakeFiles/2023_11_20_napredni_objekti.dir/main.cpp.o	c034a3f8f7a5b5a3
+841	1065	1700516010405927262	CMakeFiles/2023_11_20_napredni_objekti.dir/texture/Texture.cpp.o	5d233d7fa0dd9260
+661	1138	1700516010479058798	CMakeFiles/2023_11_20_napredni_objekti.dir/world/io/keyboard/Keyboard.cpp.o	d782aeaae17faf30
+743	1175	1700516010516087464	CMakeFiles/2023_11_20_napredni_objekti.dir/world/camera/Camera.cpp.o	d77b0f1ca73794b2
+567	1211	1700516010551497663	CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/cuboid-shape/CuboidShape.cpp.o	9955c9841cb09aa6
+707	1306	1700516010646203070	CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/cuboid-shape/cuboid-shape-element/CuboidShapeElement.cpp.o	ac8724ff8f373693
+1038	1427	1700516010768897343	CMakeFiles/2023_11_20_napredni_objekti.dir/material/Material.cpp.o	40120a644b16f0ed
+964	1513	1700516010854810867	CMakeFiles/2023_11_20_napredni_objekti.dir/object/texture-mesh/TextureMesh.cpp.o	7441c534003f13fa
+1034	1762	1700516011102107048	CMakeFiles/2023_11_20_napredni_objekti.dir/object/model/Model.cpp.o	826925e8095bb28f
+1762	1804	1700516011147780596	2023_11_20_napredni_objekti	265dc6695da25578
