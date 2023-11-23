@@ -56,166 +56,187 @@ build CMakeFiles/2023_11_20_napredni_objekti.dir/main.cpp.o: CXX_COMPILER__2023_
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
   OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/world/window/OpenGLWindow.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/world/window/OpenGLWindow.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/world/window/OpenGLWindow.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/window/OpenGLWindow.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/world/window/OpenGLWindow.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/window/OpenGLWindow.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/world/window
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/window
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/object/Mesh.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/object/Mesh.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/object/Mesh.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/Mesh.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/object/Mesh.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/Mesh.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/object
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/shader/program/ShaderProgram.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/shader/program/ShaderProgram.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/shader/program/ShaderProgram.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/shader/program/ShaderProgram.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/shader/program/ShaderProgram.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/shader/program/ShaderProgram.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/shader/program
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/shader/program
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/Cuboid.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/object/cuboid/Cuboid.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/Cuboid.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/cuboid/Cuboid.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/object/cuboid/Cuboid.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/cuboid/Cuboid.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/cuboid
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/vertex/VertexBuffer.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/buffer/vertex/VertexBuffer.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/vertex/VertexBuffer.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/buffer/vertex/VertexBuffer.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/buffer/vertex/VertexBuffer.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/buffer/vertex/VertexBuffer.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/vertex
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/buffer/vertex
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/index/IndexBuffer.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/buffer/index/IndexBuffer.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/index/IndexBuffer.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/buffer/index/IndexBuffer.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/buffer/index/IndexBuffer.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/buffer/index/IndexBuffer.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/index
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/buffer/index
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/vertex_array/VertexArray.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/vertex_array/VertexArray.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/vertex_array/VertexArray.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/vertex_array/VertexArray.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/vertex_array/VertexArray.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/vertex_array/VertexArray.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/vertex_array
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/vertex_array
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/layout/BufferLayout.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/buffer/layout/BufferLayout.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/layout/BufferLayout.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/buffer/layout/BufferLayout.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/buffer/layout/BufferLayout.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/buffer/layout/BufferLayout.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/layout
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/buffer/layout
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/shader/Shader.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/shader/Shader.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/shader/Shader.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/shader/Shader.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/shader/Shader.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/shader/Shader.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/shader
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/shader
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/renderer/Renderer.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/renderer/Renderer.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/renderer/Renderer.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/renderer/Renderer.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/renderer/Renderer.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/renderer/Renderer.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/renderer
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/renderer
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/scale/Scale.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/object/transformation/scale/Scale.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/scale/Scale.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/transformation/scale/Scale.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/object/transformation/scale/Scale.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/transformation/scale/Scale.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/scale
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/transformation/scale
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/translation/Translation.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/object/transformation/translation/Translation.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/translation/Translation.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/transformation/translation/Translation.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/object/transformation/translation/Translation.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/transformation/translation/Translation.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/translation
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/transformation/translation
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/rotation/Rotation.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/object/transformation/rotation/Rotation.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/rotation/Rotation.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/transformation/rotation/Rotation.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/object/transformation/rotation/Rotation.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/transformation/rotation/Rotation.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/rotation
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/transformation/rotation
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/color/Color.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/color/Color.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/color/Color.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/color/Color.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/color/Color.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/color/Color.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/color
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/color
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/cuboid-shape/CuboidShape.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/object/cuboid/cuboid-shape/CuboidShape.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/cuboid-shape/CuboidShape.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/cuboid/cuboid-shape/CuboidShape.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/object/cuboid/cuboid-shape/CuboidShape.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/cuboid/cuboid-shape/CuboidShape.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/cuboid-shape
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/cuboid/cuboid-shape
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/cuboid-shape/cuboid-shape-element/CuboidShapeElement.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/object/cuboid/cuboid-shape/cuboid-shape-element/CuboidShapeElement.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/cuboid-shape/cuboid-shape-element/CuboidShapeElement.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/cuboid/cuboid-shape/cuboid-shape-element/CuboidShapeElement.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/object/cuboid/cuboid-shape/cuboid-shape-element/CuboidShapeElement.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/cuboid/cuboid-shape/cuboid-shape-element/CuboidShapeElement.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/cuboid-shape/cuboid-shape-element
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/cuboid/cuboid-shape/cuboid-shape-element
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/world/io/keyboard/Keyboard.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/world/io/keyboard/Keyboard.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/world/io/keyboard/Keyboard.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/io/keyboard/Keyboard.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/world/io/keyboard/Keyboard.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/io/keyboard/Keyboard.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/world/io/keyboard
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/io/keyboard
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/world/camera/Camera.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/world/camera/Camera.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/world/camera/Camera.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/camera/Camera.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/world/camera/Camera.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/camera/Camera.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/world/camera
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/camera
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/world/io/mouse/Mouse.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/world/io/mouse/Mouse.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/world/io/mouse/Mouse.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/io/mouse/Mouse.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/world/io/mouse/Mouse.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/io/mouse/Mouse.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/world/io/mouse
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/io/mouse
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/texture/Texture.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/texture/Texture.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/texture/Texture.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/texture/Texture.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/texture/Texture.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/texture/Texture.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/texture
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/texture
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/object/texture-mesh/TextureMesh.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/object/texture-mesh/TextureMesh.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/object/texture-mesh/TextureMesh.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/texture-mesh/TextureMesh.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/object/texture-mesh/TextureMesh.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/texture-mesh/TextureMesh.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/object/texture-mesh
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/texture-mesh
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/material/Material.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/material/Material.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/material/Material.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/material/Material.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/material/Material.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/material/Material.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/material
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/material
 
-build CMakeFiles/2023_11_20_napredni_objekti.dir/object/model/Model.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/object/model/Model.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
-  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/object/model/Model.cpp.o.d
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/model/Model.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/object/model/Model.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/model/Model.cpp.o.d
   FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
   INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
   OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
-  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/object/model
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/model
+
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/2d/rectangle/Rectangle.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/object/2d/rectangle/Rectangle.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/2d/rectangle/Rectangle.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
+  INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
+  OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/2d/rectangle
+
+build CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/light/Light.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/graphics/world/light/Light.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/light/Light.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
+  INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
+  OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/light
+
+build CMakeFiles/2023_11_20_napredni_objekti.dir/toolbar/Toolbar.cpp.o: CXX_COMPILER__2023_11_20_napredni_objekti_unscanned_Debug /Users/aljazkokol/Desktop/FERI/RG/2023_11_20_napredni_objekti/toolbar/Toolbar.cpp || cmake_object_order_depends_target_2023_11_20_napredni_objekti
+  DEP_FILE = CMakeFiles/2023_11_20_napredni_objekti.dir/toolbar/Toolbar.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks
+  INCLUDES = -isystem /opt/homebrew/include -isystem /opt/homebrew/lib -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks
+  OBJECT_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir
+  OBJECT_FILE_DIR = CMakeFiles/2023_11_20_napredni_objekti.dir/toolbar
 
 
 # =============================================================================
@@ -225,7 +246,7 @@ build CMakeFiles/2023_11_20_napredni_objekti.dir/object/model/Model.cpp.o: CXX_C
 #############################################
 # Link the executable 2023_11_20_napredni_objekti
 
-build 2023_11_20_napredni_objekti: CXX_EXECUTABLE_LINKER__2023_11_20_napredni_objekti_Debug CMakeFiles/2023_11_20_napredni_objekti.dir/main.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/world/window/OpenGLWindow.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/object/Mesh.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/shader/program/ShaderProgram.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/Cuboid.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/vertex/VertexBuffer.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/index/IndexBuffer.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/vertex_array/VertexArray.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/buffer/layout/BufferLayout.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/shader/Shader.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/renderer/Renderer.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/scale/Scale.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/translation/Translation.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/object/transformation/rotation/Rotation.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/color/Color.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/cuboid-shape/CuboidShape.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/object/cuboid/cuboid-shape/cuboid-shape-element/CuboidShapeElement.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/world/io/keyboard/Keyboard.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/world/camera/Camera.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/world/io/mouse/Mouse.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/texture/Texture.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/object/texture-mesh/TextureMesh.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/material/Material.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/object/model/Model.cpp.o | /opt/homebrew/lib/libassimp.5.3.0.dylib /opt/homebrew/lib/libglfw.3.3.dylib /opt/homebrew/lib/libGLEW.2.2.0.dylib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd /opt/homebrew/lib/libzlibstatic.a
+build 2023_11_20_napredni_objekti: CXX_EXECUTABLE_LINKER__2023_11_20_napredni_objekti_Debug CMakeFiles/2023_11_20_napredni_objekti.dir/main.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/window/OpenGLWindow.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/Mesh.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/shader/program/ShaderProgram.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/cuboid/Cuboid.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/buffer/vertex/VertexBuffer.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/buffer/index/IndexBuffer.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/vertex_array/VertexArray.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/buffer/layout/BufferLayout.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/shader/Shader.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/renderer/Renderer.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/transformation/scale/Scale.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/transformation/translation/Translation.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/transformation/rotation/Rotation.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/color/Color.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/cuboid/cuboid-shape/CuboidShape.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/cuboid/cuboid-shape/cuboid-shape-element/CuboidShapeElement.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/io/keyboard/Keyboard.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/camera/Camera.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/io/mouse/Mouse.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/texture/Texture.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/texture-mesh/TextureMesh.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/material/Material.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/model/Model.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/object/2d/rectangle/Rectangle.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/graphics/world/light/Light.cpp.o CMakeFiles/2023_11_20_napredni_objekti.dir/toolbar/Toolbar.cpp.o | /opt/homebrew/lib/libassimp.5.3.0.dylib /opt/homebrew/lib/libglfw.3.3.dylib /opt/homebrew/lib/libGLEW.2.2.0.dylib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd /opt/homebrew/lib/libzlibstatic.a
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libassimp.5.3.0.dylib  /opt/homebrew/lib/libglfw.3.3.dylib  /opt/homebrew/lib/libGLEW.2.2.0.dylib  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd  /opt/homebrew/lib/libzlibstatic.a  -Xlinker -framework -Xlinker OpenGL
   LINK_PATH = -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks

@@ -1,13 +1,13 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <gl/glew.h>
-#include "world/window/OpenGLWindow.h"
-#include "renderer/Renderer.h"
-#include "shader/program/ShaderProgram.h"
-#include "object/transformation/translation/Translation.h"
-#include "object/transformation/scale/Scale.h"
-#include "object/cuboid/cuboid-shape/CuboidShape.h"
-#include <glm/glm.hpp>
-
+#include "graphics/world/window/OpenGLWindow.h"
+#include "graphics/shader/program/ShaderProgram.h"
+#include "graphics/object/cuboid/cuboid-shape/CuboidShape.h"
+#include "graphics/object/model/Model.h"
+#include "graphics/world/light/Light.h"
+#include "graphics/material/Material.h"
+#include "toolbar/Toolbar.h"
+#include <memory>
 
 int main() {
     OpenGLWindow window("02 - piramida", 1920, 1080);
@@ -17,40 +17,60 @@ int main() {
         { "fragment.frag", GL_FRAGMENT_SHADER }
     });
 
-    const std::vector<std::shared_ptr<Transformation>> CUBE_TRANSFORMATIONS = {
-            std::make_shared<Translation>(glm::vec3(0, 0, -2.5)),
-            std::make_shared<Rotation>(glm::vec3(0, 45, 0)),
-            std::make_shared<Scale>(1),
-    };
-
-    const std::vector<std::shared_ptr<Transformation>> CUBE_TRANSFORMATIONS2 = {
-            std::make_shared<Translation>(glm::vec3(0, -3, -2.5)),
-            std::make_shared<Rotation>(glm::vec3(0, 45, 0)),
-            std::make_shared<Scale>(1),
-    };
-
     shaderProgram.compile();
 
-    Cuboid cube(shaderProgram, 1, 1, 1);
+    Cuboid cursor(shaderProgram, 0.1, 0.1, 0.1);
+
+    Material shinnyMaterial(shaderProgram, 1.0, 128);
+    Light ambientLight(shaderProgram, Color::WHITE, 0.5, glm::vec3(2, -1, -2), 0.5);
+    Light brightLight(shaderProgram, Color::WHITE, 1, glm::vec3(2, -1, -2), 1);
+
+    Toolbar toolbar(shaderProgram, window.getCamera());
+    toolbar.addModel(shaderProgram, "models/monkey.obj");
+    toolbar.addModel(shaderProgram, "models/donut.obj");
+    toolbar.addModel(shaderProgram, "models/icoSphere.obj");
 
     window.setKeyActions({
          { GLFW_KEY_ESCAPE, [&](GLfloat delta) { window.closeWindow(); } },
          // Camera movement
+
+         { GLFW_KEY_TAB,  [&](GLfloat delta) { window.selectNextModel(); } },
+
          { GLFW_KEY_W, [&](GLfloat) { window.moveCamera(Direction::FRONT); } },
          { GLFW_KEY_S, [&](GLfloat) { window.moveCamera(Direction::BACK); } },
          { GLFW_KEY_A, [&](GLfloat) { window.moveCamera(Direction::LEFT); } },
          { GLFW_KEY_D, [&](GLfloat) { window.moveCamera(Direction::RIGHT); } },
+
+         { GLFW_KEY_W +  GLFW_KEY_LEFT_SHIFT, [&](GLfloat) { window.moveSelectedModel(Direction::UP); } },
+         { GLFW_KEY_S +  GLFW_KEY_LEFT_SHIFT, [&](GLfloat) { window.moveSelectedModel(Direction::DOWN); } },
+         { GLFW_KEY_A +  GLFW_KEY_LEFT_SHIFT, [&](GLfloat) { window.moveSelectedModel(Direction::LEFT); } },
+         { GLFW_KEY_D +  GLFW_KEY_LEFT_SHIFT, [&](GLfloat) { window.moveSelectedModel(Direction::RIGHT); } },
+         { GLFW_KEY_Q +  GLFW_KEY_LEFT_SHIFT, [&](GLfloat) { window.moveSelectedModel(Direction::FRONT); } },
+         { GLFW_KEY_E +  GLFW_KEY_LEFT_SHIFT, [&](GLfloat) { window.moveSelectedModel(Direction::BACK); } },
+
+         { GLFW_KEY_1, [&](GLfloat) { toolbar.selectItem(0); } },
+         { GLFW_KEY_2, [&](GLfloat) { toolbar.selectItem(1); } },
+         { GLFW_KEY_3, [&](GLfloat) { toolbar.selectItem(2); } },
      });
 
+    window.setOnClick([&]() {
+        Model model(shaderProgram, window.getCamera());
+        model.load(toolbar.getSelectedModelName());
+        window.addDrawModel(std::make_shared<Model>(model));
+    });
+
     window.run(shaderProgram, [&]() {
-        cube.applyTransformations("model", CUBE_TRANSFORMATIONS);
-        cube.setColor(Color::RED + Color::YELLOW * 0.5f);
-        Renderer::draw<DrawMode::TRIANGLES>(cube);
+        brightLight.use();
+        cursor.setColor(Color::WHITE);
+        cursor.applyTransformationsFixedToCamera("model", window.getCamera(), {
+                std::make_shared<Translation>(glm::vec3{0, 0, -2}),
+                std::make_shared<Scale>(0.1),
+        });
+        Renderer::draw<DrawMode::TRIANGLES>(cursor);
 
-        cube.applyTransformations("model", CUBE_TRANSFORMATIONS2);
-        cube.setColor(Color::RED + Color::RED * 0.5f);
-        Renderer::draw<DrawMode::TRIANGLES>(cube);
-
+        ambientLight.use();
+        shinnyMaterial.bind();
+        toolbar.draw();
     });
 
     return 0;
