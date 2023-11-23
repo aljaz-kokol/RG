@@ -7,9 +7,12 @@
 #include "graphics/world/light/Light.h"
 #include "graphics/material/Material.h"
 #include "toolbar/Toolbar.h"
+#include <filesystem>
 #include <memory>
+#include <CoreServices/CoreServices.h>
 
 int main() {
+
     OpenGLWindow window("02 - piramida", 1920, 1080);
 
     ShaderProgram shaderProgram({
@@ -24,11 +27,12 @@ int main() {
     Material shinnyMaterial(shaderProgram, 1.0, 128);
     Light ambientLight(shaderProgram, Color::WHITE, 0.5, glm::vec3(2, -1, -2), 0.5);
     Light brightLight(shaderProgram, Color::WHITE, 1, glm::vec3(2, -1, -2), 1);
-
     Toolbar toolbar(shaderProgram, window.getCamera());
-    toolbar.addModel(shaderProgram, "models/monkey.obj");
-    toolbar.addModel(shaderProgram, "models/donut.obj");
-    toolbar.addModel(shaderProgram, "models/icoSphere.obj");
+
+    std::string path = "models";
+    for (const auto & entry : std::filesystem::directory_iterator(path)) {
+        toolbar.addModel(shaderProgram, entry.path().string());
+    }
 
     window.setKeyActions({
          { GLFW_KEY_ESCAPE, [&](GLfloat delta) { window.closeWindow(); } },
@@ -40,6 +44,13 @@ int main() {
          { GLFW_KEY_S, [&](GLfloat) { window.moveCamera(Direction::BACK); } },
          { GLFW_KEY_A, [&](GLfloat) { window.moveCamera(Direction::LEFT); } },
          { GLFW_KEY_D, [&](GLfloat) { window.moveCamera(Direction::RIGHT); } },
+         { GLFW_KEY_R, [&](GLfloat) {
+             std::string path = "models";
+             toolbar.clear();
+             for (const auto & entry : std::filesystem::directory_iterator(path)) {
+                 toolbar.addModel(shaderProgram, entry.path().string());
+             }
+         } },
 
          { GLFW_KEY_W +  GLFW_KEY_LEFT_SHIFT, [&](GLfloat) { window.moveSelectedModel(Direction::UP); } },
          { GLFW_KEY_S +  GLFW_KEY_LEFT_SHIFT, [&](GLfloat) { window.moveSelectedModel(Direction::DOWN); } },
@@ -58,6 +69,7 @@ int main() {
         model.load(toolbar.getSelectedModelName());
         window.addDrawModel(std::make_shared<Model>(model));
     });
+
 
     window.run(shaderProgram, [&]() {
         brightLight.use();

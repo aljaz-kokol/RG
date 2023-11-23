@@ -13,14 +13,15 @@ private:
     Cuboid baseRectangle;
     Light light;
     std::vector<std::shared_ptr<Model>> models;
-    std::vector<std::string_view> modelNames;
+    std::vector<std::string> modelNames;
     uint32_t selectedItem;
 
 public:
     Toolbar(const ShaderProgram& program, const Camera& camera);
     void draw() const;
-    void addModel(const ShaderProgram& program, std::string_view modelName);
+    void addModel(const ShaderProgram& program, const std::string &modelName);
     void selectItem(uint32_t item);
+    void clear();
     [[nodiscard]] std::string_view getSelectedModelName() const;
 };
 

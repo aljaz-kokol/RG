@@ -51,11 +51,16 @@ void Toolbar::draw() const {
 
 }
 
-void Toolbar::addModel(const ShaderProgram& program, std::string_view modelName) {
+void Toolbar::addModel(const ShaderProgram& program, const std::string &modelName) {
     Model model(program);
     model.load(modelName);
     models.push_back(std::make_shared<Model>(model));
     modelNames.push_back(modelName);
+}
+
+void Toolbar::clear() {
+    modelNames.clear();
+    models.clear();
 }
 
 void Toolbar::selectItem(uint32_t item) {
