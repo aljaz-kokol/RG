@@ -19,7 +19,7 @@ void main() {
     gl_Position = projection * view * model * vec4(pos, 1.0);
     vec3 color = normalize(pos) * 0.5 + vec3(tex, 0.0) * 0.5 + normalize(norm) * 0.5;
     color = color * 0.5 + 0.5;
-    vColor = meshColor * vec4(normalize(color), 1);
+    vColor = meshColor;
     texCoord = tex;
     // nrom is only direction so we move it to the model positon
     // mat3 --> ignore transforms (most transforms take into account last / bottom row / colums)

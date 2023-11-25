@@ -9,7 +9,6 @@
 #include "toolbar/Toolbar.h"
 #include <filesystem>
 #include <memory>
-#include <CoreServices/CoreServices.h>
 
 int main() {
 
@@ -24,7 +23,7 @@ int main() {
 
     Cuboid cursor(shaderProgram, 0.1, 0.1, 0.1);
 
-    Material shinnyMaterial(shaderProgram, 1.0, 128);
+    Material shinnyMaterial(shaderProgram, 0.4  , 4);
     Light ambientLight(shaderProgram, Color::WHITE, 0.5, glm::vec3(2, -1, -2), 0.5);
     Light brightLight(shaderProgram, Color::WHITE, 1, glm::vec3(2, -1, -2), 1);
     Toolbar toolbar(shaderProgram, window.getCamera());
@@ -62,6 +61,12 @@ int main() {
          { GLFW_KEY_1, [&](GLfloat) { toolbar.selectItem(0); } },
          { GLFW_KEY_2, [&](GLfloat) { toolbar.selectItem(1); } },
          { GLFW_KEY_3, [&](GLfloat) { toolbar.selectItem(2); } },
+         { GLFW_KEY_4, [&](GLfloat) { toolbar.selectItem(3); } },
+         { GLFW_KEY_5, [&](GLfloat) { toolbar.selectItem(4); } },
+         { GLFW_KEY_6, [&](GLfloat) { toolbar.selectItem(5); } },
+         { GLFW_KEY_7, [&](GLfloat) { toolbar.selectItem(6); } },
+         { GLFW_KEY_8, [&](GLfloat) { toolbar.selectItem(7); } },
+         { GLFW_KEY_9, [&](GLfloat) { toolbar.selectItem(8); } },
      });
 
     window.setOnClick([&]() {
