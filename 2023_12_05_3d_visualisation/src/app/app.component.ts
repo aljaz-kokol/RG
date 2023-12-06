@@ -36,7 +36,7 @@ export class AppComponent implements OnInit, OnDestroy {
     constructor(private webglWindowService: WebGlWindowService, private saveMeshService: SaveMeshService, private followRoad: FollowRoadCar) {
     }
 
-    onModelSelected() {
+    onModelSelectedFromFile() {
         const files = this.modelFilePicker.nativeElement.files ?? new FileList();
         if (files.length === 0) return;
         const file: File = files[0];
@@ -69,7 +69,7 @@ export class AppComponent implements OnInit, OnDestroy {
         });
         this.webglWindowService.loadModelFromName('board');
         this.webglWindowService.loadModelFromName('stick');
-        this.followRoad.rotateWheel('wheel');
+        this.webglWindowService.loadModelFromName('wheel');
     }
 
     ngOnDestroy() {
