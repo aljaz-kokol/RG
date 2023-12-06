@@ -1,6 +1,6 @@
 import {ElementRef, Inject, Injectable, InjectionToken, OnDestroy} from '@angular/core';
 import {WebGLModelFactory, WebGlWindow} from '../_common/webgl';
-import {Box3, Color, MathUtils, Mesh, MeshStandardMaterial, Raycaster, Vector3} from 'three';
+import {Color, Mesh, MeshStandardMaterial, Raycaster} from 'three';
 import {Observable, Subject, Subscription} from 'rxjs';
 import {DragControls} from 'three/examples/jsm/controls/DragControls.js';
 import {LoadMeshService} from './load-mesh.service';
@@ -99,21 +99,11 @@ export class WebGlWindowService implements OnDestroy {
         if (!this._modelsMap.has(modelName)) return;
 
         const model = this._modelsMap.get(modelName)!;
-
-        // Convert the angle to radians
-        const angleInRadians = MathUtils.degToRad(angle);
-
-        // Assuming the model is a Three.js object3D
-        // Set the rotation origin to the center of the model
-        const boundingBox = new Box3().setFromObject(model);
-        const center = boundingBox.getCenter(new Vector3(0, 0, 0));
-
         const originalPosition = model.position.clone();
         console.log(originalPosition);
         // Move the model to the origin
         model.rotation.set(0, 0, 0);
-        model.rotateOnWorldAxis(new Vector3(0, 0, 1), angle);
-        model.translateZ(3);
+        model.rotateZ(angle);
     }
 
     hasModel(name: string): boolean {
