@@ -67,9 +67,10 @@ export class AppComponent implements OnInit, OnDestroy {
         this._loadedModelsSubscription = this.webglWindowService.loadedModelsListener.subscribe(models => {
             this.loadedModels = models;
         });
+
         this.webglWindowService.loadModelFromName('board');
         this.webglWindowService.loadModelFromName('stick');
-        this.webglWindowService.loadModelFromName('wheel');
+        this.followRoad.rotateWheel('wheel');
     }
 
     ngOnDestroy() {
@@ -87,5 +88,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
     onSaveClicked() {
         this.saveMeshService.saveToFile([...this.loadedModels.values()]);
+    }
+
+    onRemoveMesh(model: Mesh) {
+        this.webglWindowService.removeModelByName(model.name);
     }
 }

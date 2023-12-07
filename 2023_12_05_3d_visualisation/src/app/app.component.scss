@@ -18,7 +18,6 @@ canvas {
   }
 
   .model-list {
-    max-height: 35%;
     padding: 5px 0;
 
     .header {
@@ -39,6 +38,14 @@ canvas {
 
       .active {
         background: #66BB6A;
+      }
+
+      .removeButton {
+        float: right;
+        background: white;
+        color: red;
+        border: none;
+        outline: none
       }
 
       .title {

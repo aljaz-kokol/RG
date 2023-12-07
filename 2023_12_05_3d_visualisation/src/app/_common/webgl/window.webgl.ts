@@ -1,15 +1,15 @@
 import {
-  AmbientLight,
-  AxesHelper,
-  Camera,
-  DirectionalLight,
-  GridHelper,
-  Object3D,
-  PerspectiveCamera,
-  Raycaster,
-  Scene,
-  Vector2,
-  WebGLRenderer
+    AmbientLight,
+    AxesHelper,
+    Camera,
+    DirectionalLight,
+    GridHelper,
+    Object3D,
+    PerspectiveCamera,
+    Raycaster,
+    Scene,
+    Vector2,
+    WebGLRenderer
 } from 'three';
 import {ElementRef} from '@angular/core';
 import {Observable, Subject} from 'rxjs';
@@ -77,6 +77,10 @@ export class WebGlWindow {
 
     addToScene(object: Object3D) {
         this._scene.add(object)
+    }
+
+    removeFromScene(object: Object3D) {
+        this._scene.remove(object)
     }
 
     enableOrbitalControls(enable: boolean) {

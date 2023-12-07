@@ -10,6 +10,7 @@
         <div class="object-card" *ngFor="let model of loadedModels.values()" (click)="onSelectModel(model.name)">
             <h3 class="title" [ngClass]="{'active': model.name === selectedModel?.name}">
                 <input type="text" name="" [value]="model | modelName" (change)="onNameChange($event, model)">
+                <button class="removeButton" (click)="onRemoveMesh(model)">X</button>
             </h3>
         </div>
     </section>

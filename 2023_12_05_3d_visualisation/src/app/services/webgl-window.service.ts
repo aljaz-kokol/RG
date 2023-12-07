@@ -1,5 +1,5 @@
 import {ElementRef, Inject, Injectable, InjectionToken, OnDestroy} from '@angular/core';
-import {WebGLModelFactory, WebGlWindow} from '../_common/webgl';
+import {WebGlWindow} from '../_common/webgl';
 import {Color, Mesh, MeshStandardMaterial, Raycaster} from 'three';
 import {Observable, Subject, Subscription} from 'rxjs';
 import {DragControls} from 'three/examples/jsm/controls/DragControls.js';
@@ -65,9 +65,7 @@ export class WebGlWindowService implements OnDestroy {
     }
 
     async loadModelFromFile(file: File) {
-        const data = await this.loadMeshService.loadFromFile(file);
-        const name = file.name.split('.').slice(0, -1).join('.');
-        const meshList = WebGLModelFactory.createBasic(data, name);
+        const meshList = await this.loadMeshService.loadModelFromFile(file)
         meshList.forEach((mesh: Mesh) => {
             this._webglWindow.addToScene(mesh);
             this._modelsMap.set(mesh.name, mesh);
@@ -76,15 +74,14 @@ export class WebGlWindowService implements OnDestroy {
     }
 
     async loadModelFromName(modelName: string) {
-        return this.fileReader.readFile(`${modelName}.obj`).subscribe((data) => {
-            const object = this.loadMeshService.loadFromData(data);
-            const meshList = WebGLModelFactory.createBasic(object, modelName);
+        const meshObservable = await this.loadMeshService.loadModelFromName(modelName);
+        meshObservable.subscribe(meshList => {
             meshList.forEach((mesh: Mesh) => {
                 this._webglWindow.addToScene(mesh);
                 this._modelsMap.set(mesh.name, mesh);
             });
             this._loadedModelsListener.next(this._modelsMap);
-        })
+        });
     }
 
     get loadedModelsListener(): Observable<Map<string, Mesh>> {
@@ -97,13 +94,9 @@ export class WebGlWindowService implements OnDestroy {
 
     async getModelByNameAndRotate(modelName: string, angle: number) {
         if (!this._modelsMap.has(modelName)) return;
-
         const model = this._modelsMap.get(modelName)!;
-        const originalPosition = model.position.clone();
-        console.log(originalPosition);
-        // Move the model to the origin
-        model.rotation.set(0, 0, 0);
         model.rotateZ(angle);
+        model.geometry.center();
     }
 
     hasModel(name: string): boolean {
@@ -126,6 +119,13 @@ export class WebGlWindowService implements OnDestroy {
             this._modelsMap.set(newName, existingModel);
             this._modelsMap.delete(model.name);
             existingModel.name = newName;  // Update the name property of the model
+        }
+    }
+
+    removeModelByName(name: string) {
+        if (this._modelsMap.has(name)) {
+            this._webglWindow.removeFromScene(this._modelsMap.get(name)!);
+            this._modelsMap.delete(name);
         }
     }
 

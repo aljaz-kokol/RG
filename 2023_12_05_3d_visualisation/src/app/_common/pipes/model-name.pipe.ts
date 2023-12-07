@@ -8,7 +8,8 @@ import {Mesh} from 'three';
 export class ModelNamePipe implements PipeTransform {
 
     transform(value: Mesh): string {
-        const nameParts = value.name.split('-');
-        return nameParts.length > 1 ? nameParts.slice(0, -1).join('-') : nameParts[0]; // Join all elements except the last one
+        // const nameParts = value.name.split('-');
+        // return nameParts.length > 1 ? nameParts.slice(0, -1).join('-') : nameParts[0]; // Join all elements except the last one
+        return value.name;
     }
 }
