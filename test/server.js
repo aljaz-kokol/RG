@@ -8,7 +8,7 @@ app.use(cors());
 app.get('/api/random', (req, res, next ) => {
     let numbers = [];
     for (let i = 0; i < 5; i++) {
-        numbers.push(Math.random() * (45 + 45) - 45)
+        numbers.push(Math.random() * (180 + 0) - 0)
     }
     res.status(200).json(numbers);
 });
