@@ -1,0 +1,24 @@
+<canvas #webgl></canvas>
+
+<div class="sidebar">
+    <section class="model-list">
+        <div class="header">
+            <h2>Loaded Models</h2>
+            <p-button icon="pi pi-save" [rounded]="true" [text]="true" (click)="onSaveClicked()"></p-button>
+        </div>
+        <hr/>
+        <div class="object-card" *ngFor="let model of loadedModels.values()" (click)="onSelectModel(model.name)">
+            <h3 class="title" [ngClass]="{'active': model.name === selectedModel?.name}">
+                <input type="text" name="" [value]="model | modelName" (change)="onNameChange($event, model)">
+                <button class="removeButton" (click)="onRemoveMesh(model)">X</button>
+            </h3>
+        </div>
+    </section>
+    <hr/>
+</div>
+
+<div class="action-menu">
+    <p-speedDial [model]="items" [radius]="120" direction="up-left" type="quarter-circle"></p-speedDial>
+</div>
+<input type="file" [multiple]="false" [accept]="acceptModels" (change)="onModelSelectedFromFile()" hidden
+       #modelFilePicker/>
