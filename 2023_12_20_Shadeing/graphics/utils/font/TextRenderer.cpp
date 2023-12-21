@@ -25,3 +25,7 @@ void TextRenderer::renderPushed() const {
 void TextRenderer::setTextShaderProgram(const std::shared_ptr<ShaderProgram> &textShaderProgram) {
     this->textShaderProgram = textShaderProgram;
 }
+
+void TextRenderer::clearPushed() {
+    prints.clear();
+}

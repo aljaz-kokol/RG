@@ -26,6 +26,7 @@ public:
     void pushRender(const std::string& font, const std::string& text, float x = 0.0, float y = 0.0, float scale = 1.0, const Color& color = Color::WHITE);
     void renderPushed() const;
     void setTextShaderProgram(const std::shared_ptr<ShaderProgram>& textShaderProgram);
+    void clearPushed();
 };
 
 #endif

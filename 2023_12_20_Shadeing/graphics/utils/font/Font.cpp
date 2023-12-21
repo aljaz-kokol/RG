@@ -55,7 +55,7 @@ Font::Font(std::string_view filePath, FT_UInt fontHeight): vbo({}) {
 
 void Font::renderText(const ShaderProgram &program, std::string_view text, float x, float y, float scale, const Color &color) const {
     program.bind();
-    glm::mat4 projection = glm::ortho(0.0f, 800.0f, 0.0f, 600.0f);
+    glm::mat4 projection = glm::ortho(0.0f, 1920.0f, 0.0f, 1080.0f);
     program.setUniform("textColor", color.getRGB());
     program.setUniform("projection", projection);
     glActiveTexture(GL_TEXTURE1);

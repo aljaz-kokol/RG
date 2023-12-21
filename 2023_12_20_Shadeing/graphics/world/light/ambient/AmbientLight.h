@@ -12,6 +12,15 @@ private:
 public:
     AmbientLight(const ShaderProgram& program, const Color& color, GLfloat intensity);
     void use() const override;
+    void unbind() const;
+
+    const Color &getColor() const;
+
+    GLfloat getIntensity() const;
+
+    void setColor(const Color &color);
+
+    void setIntensity(GLfloat intensity);
 };
 
 #endif

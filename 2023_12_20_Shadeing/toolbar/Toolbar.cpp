@@ -3,14 +3,13 @@
 
 Toolbar::Toolbar(const ShaderProgram& program, const Camera &camera)
 : camera(camera), baseRectangle(program, 1, 0.03, 0.05),
-light(program, Color::WHITE * 0.9f, 0.8), selectedItem(0), program(program)
+light(program, Color::WHITE * 0.9f, 0.2), selectedItem(0), program(program)
 {}
 
 void Toolbar::draw() const {
     static float selectedItemRotationAngle = 0.0;
-    light.use();
     baseRectangle.applyTransformationsFixedToCamera("model", camera, {
-            std::make_shared<Translation>(glm::vec3(0, -0.6, -1)),
+        std::make_shared<Translation>(glm::vec3(0, -0.6, -1)),
     });
 
     baseRectangle.setColor(Color::WHITE * 0.45f);
