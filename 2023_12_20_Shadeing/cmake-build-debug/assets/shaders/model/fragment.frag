@@ -35,12 +35,11 @@ void main() {
 
     if (diffuseFactor > 0.0) {
         vec3 fragToEye = normalize(eyePosition - posNorm);
+        vec3 reflectDir = reflect(-directionalLight.position, norm);
         vec3 halfwayDir = normalize(posNorm + fragToEye);
-        float specularFactor = max(dot(norm, halfwayDir), 0.0);
 
+        float specularFactor = pow(max(dot(norm, halfwayDir), 0.0), material.shininess);
         if (specularFactor > 0.0) {
-            specularFactor = pow(specularFactor, max(material.shininess, 1.0));
-            specularFactor = max(specularFactor, 0.0); // Ensure non-negative value
             specularColor = vec4(directionalLight.color, 1.0) * material.specularIntensity * specularFactor;
         }
     }

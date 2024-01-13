@@ -1,4 +1,4 @@
-# Install script for directory: /Users/aljazkokol/Desktop/FERI/RG/2023_12_20_Shadeing
+# Install script for directory: /Users/aljazkokol/Desktop/workspace/FERI/RG/2023_12_20_Shadeing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/aljazkokol/Desktop/FERI/RG/2023_12_20_Shadeing/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/aljazkokol/Desktop/workspace/FERI/RG/2023_12_20_Shadeing/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

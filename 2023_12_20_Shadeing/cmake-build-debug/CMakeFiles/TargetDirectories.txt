@@ -1,3 +1,3 @@
-/Users/aljazkokol/Desktop/FERI/RG/2023_12_20_Shadeing/cmake-build-debug/CMakeFiles/2023_12_20_Shadeing.dir
-/Users/aljazkokol/Desktop/FERI/RG/2023_12_20_Shadeing/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/aljazkokol/Desktop/FERI/RG/2023_12_20_Shadeing/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/aljazkokol/Desktop/workspace/FERI/RG/2023_12_20_Shadeing/cmake-build-debug/CMakeFiles/2023_12_20_Shadeing.dir
+/Users/aljazkokol/Desktop/workspace/FERI/RG/2023_12_20_Shadeing/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/aljazkokol/Desktop/workspace/FERI/RG/2023_12_20_Shadeing/cmake-build-debug/CMakeFiles/rebuild_cache.dir
