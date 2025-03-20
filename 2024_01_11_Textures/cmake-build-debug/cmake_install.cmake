@@ -1,4 +1,4 @@
-# Install script for directory: /Users/aljazkokol/Desktop/workspace/FERI/RG/2024_01_11_Textures
+# Install script for directory: /Users/aljazkokol/Desktop/workspace/FERI/dodiplomski/03_letnik/05_semester/RG/2024_01_11_Textures
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/aljazkokol/Desktop/workspace/FERI/RG/2024_01_11_Textures/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/aljazkokol/Desktop/workspace/FERI/dodiplomski/03_letnik/05_semester/RG/2024_01_11_Textures/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

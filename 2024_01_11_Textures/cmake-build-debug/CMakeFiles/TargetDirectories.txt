@@ -1,3 +1,3 @@
-/Users/aljazkokol/Desktop/workspace/FERI/RG/2024_01_11_Textures/cmake-build-debug/CMakeFiles/2024_01_11_Textures.dir
-/Users/aljazkokol/Desktop/workspace/FERI/RG/2024_01_11_Textures/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/aljazkokol/Desktop/workspace/FERI/RG/2024_01_11_Textures/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/aljazkokol/Desktop/workspace/FERI/dodiplomski/03_letnik/05_semester/RG/2024_01_11_Textures/cmake-build-debug/CMakeFiles/2024_01_11_Textures.dir
+/Users/aljazkokol/Desktop/workspace/FERI/dodiplomski/03_letnik/05_semester/RG/2024_01_11_Textures/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/aljazkokol/Desktop/workspace/FERI/dodiplomski/03_letnik/05_semester/RG/2024_01_11_Textures/cmake-build-debug/CMakeFiles/rebuild_cache.dir

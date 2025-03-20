@@ -1,0 +1,4 @@
+/Users/aljazkokol/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/aljazkokol/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja "-DCMAKE_CXX_FLAGS=-fcoverage-mapping -fprofile-instr-generate" "-DCMAKE_C_FLAGS=-fcoverage-mapping -fprofile-instr-generate" -G Ninja -S /Users/aljazkokol/Desktop/workspace/FERI/dodiplomski/03_letnik/05_semester/RG/2024_01_11_Textures -B /Users/aljazkokol/Desktop/workspace/FERI/dodiplomski/03_letnik/05_semester/RG/2024_01_11_Textures/cmake-build-debug-coverage
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/aljazkokol/Desktop/workspace/FERI/dodiplomski/03_letnik/05_semester/RG/2024_01_11_Textures/cmake-build-debug-coverage

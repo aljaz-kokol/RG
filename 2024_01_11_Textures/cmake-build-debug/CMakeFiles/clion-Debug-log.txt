@@ -1,27 +1,4 @@
-"/Users/aljazkokol/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/233.13135.93/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/aljazkokol/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/233.13135.93/CLion.app/Contents/bin/ninja/mac/aarch64/ninja" -G Ninja -S /Users/aljazkokol/Desktop/workspace/FERI/RG/2024_01_11_Textures -B /Users/aljazkokol/Desktop/workspace/FERI/RG/2024_01_11_Textures/cmake-build-debug
--- Found GLEW: /opt/homebrew/lib/cmake/glew/glew-config.cmake  
-CMake Deprecation Warning at /opt/homebrew/lib/cmake/glm/glmConfig.cmake:1 (cmake_minimum_required):
-  Compatibility with CMake < 3.5 will be removed from a future version of
-  CMake.
-
-  Update the VERSION argument <min> value or use a ...<max> suffix to tell
-  CMake that the project does not need compatibility with older versions.
-Call Stack (most recent call first):
-  CMakeLists.txt:7 (find_package)
-
-
-CMake Deprecation Warning at /opt/homebrew/lib/cmake/glm/glmConfig.cmake:2 (cmake_policy):
-  Compatibility with CMake < 3.5 will be removed from a future version of
-  CMake.
-
-  Update the VERSION argument <min> value or use a ...<max> suffix to tell
-  CMake that the project does not need compatibility with older versions.
-Call Stack (most recent call first):
-  CMakeLists.txt:7 (find_package)
-
-
--- Found OpenGL: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/OpenGL.framework   
--- Found Freetype: /opt/homebrew/lib/libfreetype.dylib (found version "2.13.2") 
--- Configuring done (0.3s)
+/Users/aljazkokol/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/aljazkokol/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/aljazkokol/Desktop/workspace/FERI/dodiplomski/03_letnik/05_semester/RG/2024_01_11_Textures -B /Users/aljazkokol/Desktop/workspace/FERI/dodiplomski/03_letnik/05_semester/RG/2024_01_11_Textures/cmake-build-debug
+-- Configuring done (0.1s)
 -- Generating done (0.0s)
--- Build files have been written to: /Users/aljazkokol/Desktop/workspace/FERI/RG/2024_01_11_Textures/cmake-build-debug
+-- Build files have been written to: /Users/aljazkokol/Desktop/workspace/FERI/dodiplomski/03_letnik/05_semester/RG/2024_01_11_Textures/cmake-build-debug
